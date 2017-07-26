@@ -1,2 +1,4 @@
-RewriteBase on
-RewriteRule .* index.php [L]
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteBase /
