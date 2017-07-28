@@ -1,0 +1,29 @@
+#bga { position: absolute; z-index: 1; width: 100%;  height: 100%; background: rgba(0,0,0,0.8); top:0; left: 0; display: none;}
+.nameauth { font-size: 28px; width: 168px; margin: 20px auto;}
+.login, .password, .subauth { margin: 0 40px; }
+.submita:hover, .registr:hover, .profile:hover, .favorites:hover, .history:hover, .settings:hover, .exit:hover {transition: 1s;}
+.profile:hover, .favorites:hover, .history:hover, .settings:hover, .exit:hover  {color: white!important;}
+.profile,  .favorites, .history, .settings {color: #c0c0c0;}
+#authorization { z-index: 1000; width: 440px; height: 290px; display: none; position: absolute; top: 50%; margin-top: -150px; left: 50%; margin-left: -220px; background: #1a1a1a; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+.login input, .password input {width: 350px; height: 25px; padding-left: 10px;}
+.login span, .password span { margin: 10px 0; }
+.submita {background: #2580cc!important; height: 31px; width: 130px; margin: 30px 0;}
+.submita:hover { background: #30a2ff!important; }
+.registr {border: 1px solid #2580cc; width: 200px; height: 29px; line-height: 28px; margin-top: 30px;}
+.registr:hover {background: #2580cc;}
+.errorlogin { width: 290px; height: 50px; line-height:50px; position: absolute; background: #a50303; left:50%; margin-left: -145px;  top: 122px; z-index: 1000;}
+.forgot {z-index: 1000; width: 440px; height: 50px; background: #1a1a1a; line-height: 50px; border-top: 1px solid #2580CC;}
+#loginmenu { background: #1a1a1a; width: 230px; position: absolute; margin-left: -95px; display: none; padding-top: 5px;}
+.li { height: 40px; line-height: 40px; display: block;}
+.exit { height: 40px; background: url("../images/exit_black.png") no-repeat 7px!important;color: #c0c0c0!important; padding-left: 50px; margin-bottom: 10px;}
+.exit:hover {background: url("../images/exit_white.png") no-repeat 7px!important;}
+.lipro { display: inline-block; height: 40px; padding-left: 50px;}
+.proi { position: relative; top: 7px; margin-right: 10px; }
+.profile {background: url("../images/profile_black.png") no-repeat 7px;}
+.profile:hover {background: url("../images/profile_white.png") no-repeat 7px;}
+.favorites {background: url("../images/favorite_black.png") no-repeat 7px ;}
+.favorites:hover {background: url("../images/favorite_white.png") no-repeat 7px ;}
+.history {background: url("../images/history_black.png") no-repeat 7px ;}
+.history:hover {background: url("../images/history_white.png") no-repeat 7px ;}
+.settings {background: url("../images/settings_black.png") no-repeat 7px ;}
+.settings:hover {background: url("../images/settings_white.png") no-repeat 7px ;}
