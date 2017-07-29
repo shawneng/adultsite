@@ -22,6 +22,10 @@ else {
         $arrayDB = mysqli_fetch_array($query);
         if ($_SESSION['password'] == $arrayDB[0]) {
             $_SESSION['checka'] = 2;
+            $sql = "SELECT `id` FROM `users` WHERE `login` = '$loginDB'";
+            $query = mysqli_query($connect_DB, $sql);
+            $arrayDB = mysqli_fetch_array($query);
+            $_SESSION['id'] = $arrayDB[0];
         } else {
             $_SESSION['checka'] = 1;
         }

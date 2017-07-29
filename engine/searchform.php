@@ -1,3 +1,3 @@
 <?php
-echo "search";
+header("Location: ../templete/search.php")
 ?>
