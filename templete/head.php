@@ -7,14 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php //$title ?></title>
     <?php require_once "style.php" ?>
-    <script>
-        if (document.getElementById('rcheck').checked{
-            document.write('someting');
-        }
-        else {
-            document.write('nothing');
-        }
-    </script>
 </head>
 <body>
 
