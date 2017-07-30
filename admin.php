@@ -25,19 +25,22 @@
 </div>
 
 <div class="fastBlock">
-    <div class="viewUsers">
+    <div class="viewUsers inline-block">
         <span>Пользователей: </span>
         <?php
         //Змінна користувачів
         ?>
     </div>
-    <div class="cache">
+    <div class="cache inline-block">
         <span>Кэш: </span>
         <?php
         //Змінна Кеша
         ?>
     </div>
-    <div class="addNews">Add News</div>
+    <div class="buttonsWright">
+        <div class="editNews inline-block">Edit News</div>
+        <div class="addNews inline-block">Add News</div>
+    </div>
 </div>
 </body>
 </html>
