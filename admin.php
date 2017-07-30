@@ -27,7 +27,7 @@ $row_num = mysqli_num_rows($query);
 
 <div class="head">
     <h1>Admin Panel</h1>
-    <div class="viewSite"><a href="/">Просмотыр сайта</a></div>
+    <div class="viewSite"><a href="/">Просмотр сайта</a></div>
 
 </div>
 
