@@ -15,7 +15,7 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
     </div>
     <div id="loginmenu" class="textcenter radius" onmouseover="openloginmenu()" onmouseout="closeloginmenu()">
         <div class="block1">';
-        if ($checkadmin == 2) echo '<div class="li pointer"><a href="#" class="lipro panel trans">Админ панель</a></div>';
+        if ($checkadmin == 2) echo '<div class="li pointer"><a href="../admin.php" class="lipro panel trans">Админ панель</a></div>';
         echo '
             <div class="li pointer"><a href="#" class="lipro profile trans">Мой профиль</a></div>
             <div class="li pointer"><a href="#" class="lipro favorites trans">Мое любимое</a></div>
