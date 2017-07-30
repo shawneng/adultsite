@@ -31,7 +31,7 @@
         //Змінна користувачів
         ?>
     </div>
-    <div class="cache inline-block">
+    <div class="viewCache inline-block">
         <span>Кэш: </span>
         <?php
         //Змінна Кеша
