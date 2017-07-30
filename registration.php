@@ -13,9 +13,20 @@ for ($i = 0; $i < $row_num; $i++) {
 <?php require_once "templete/head.php"; ?>
 <?php require_once "templete/header.php"; ?>
 <?php require_once "templete/css/registration_style.php"; ?>
+<?php
+if ($_SESSION['registration'] == 0) {
+    echo 'Такой логин уже есть';
+}
+if ($_SESSION['registration'] == 1) {
+    echo 'Вы ввели разные пароли';
+}
+if ($_SESSION['registration'] == 2) {
+    echo 'Вы успешно зарегестрировались';
+}
+    ?>
     <div class="regisctblock radius">
         <div class="namer textcenter">Регистрация</div>
-    <form action="registrationform" method="post" class="formreg">
+    <form action="engine/formregistration.php" method="post" class="formreg">
         <div class="textlogin rtext">Введите логин:</div>
         <label>
             <input id="rlogin" class="rlogin rinput" name="rlogin">
@@ -26,15 +37,11 @@ for ($i = 0; $i < $row_num; $i++) {
         </label>
         <div class="textpass rtext">Повторите пароль:</div>
         <label>
-            <input type="password" class="rpassword rinput">
+            <input type="password" class="rpassword rinput" name="checkpass">
         </label>
         <div class="textemail rtext">Введите email:</div>
         <label>
             <input type="email" class="remail rinput" name="email">
-        </label>
-        <div class="textemail">Согласен с правилами сайта</div>
-        <label>
-            <input type="checkbox" id="rcheck">
         </label>
         <input type="submit" class="registration radius" value="Зарегестрироваться">
     </form>
