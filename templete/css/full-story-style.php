@@ -1,6 +1,6 @@
 <?php
 echo '
-.full-story {width: 1600px;}
+.full-story {width: 1600px; margin: 0 auto;}
 .videoBlock {width: 1200px; background: #000; margin: 10px auto;}
 .video video{ width: 854px; height: 480px;}
 .finfo {padding: 10px; width: 1180px; background: #000; margin: 5px auto;}
