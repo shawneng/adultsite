@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 31 2017 г., 16:39
+-- Время создания: Авг 01 2017 г., 01:41
 -- Версия сервера: 5.5.53
 -- Версия PHP: 7.1.0
 
@@ -33,17 +33,18 @@ CREATE TABLE `posts` (
   `descr` varchar(500) NOT NULL,
   `time` varchar(10) NOT NULL,
   `views` int(11) NOT NULL,
-  `likes` int(11) NOT NULL
+  `likes` int(11) NOT NULL,
+  `video` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`) VALUES
-(1, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15438, 754),
-(2, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12509, 476),
-(3, 'Русская девушка после секса страстно отсосала', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 0, 0);
+INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`) VALUES
+(1, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15438, 754, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4'),
+(2, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12509, 476, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4'),
+(3, 'Русская девушка после секса страстно отсосала', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 0, 0, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4');
 
 -- --------------------------------------------------------
 

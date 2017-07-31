@@ -33,5 +33,5 @@ else {
         setcookie('logining', '1', time()+60*60*24,  '/', 'adultsite');
     }
 }
-header("Location: ../");
+header('Location: ../');
 ?>

@@ -13,14 +13,14 @@ if ($_POST['exit']) {
     //$_SESSION['checkUser'] = 0;
     setcookie('logining', '0', time() + 60 * 60 * 24, '/', 'adultsite');
     setcookie('userStatus', '0', time() + 60 * 60 * 24, '/', 'adultsite');
-    header("Location: ../");
+    header('Location: ..' . $_SERVER['REQUEST_URI']);
 }
 // Закрытие поля авторизации
 if ($_POST['close']) {
-    unset($_SESSION['checka']);
+    setcookie('logining', '0', time() + 60 * 60 * 24, '/', 'adultsite');
 }
 // Вывод сообщения "Забыли пароль?"
-if ($_SESSION['checka'] == 1) {
+if ($_COOKIE['logining'] == 1) {
     if (!isset($_COOKIE['attemp'])) {
         setcookie('attemp', 0);
     } else {
@@ -48,7 +48,6 @@ $query = mysqli_query($connect_DB, $sql);
 $row = mysqli_fetch_array($query);
 $checkadmin = $row[0];
 setcookie('userStatus', $checkadmin);
-
 // Подключение шаблона
 if ($_GET['id'] > 0) require_once "video.php";
 else require_once "templete/main.php";
