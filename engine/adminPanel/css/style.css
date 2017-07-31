@@ -2,6 +2,7 @@
 *{margin: 0; padding: 0;}
 a { text-decoration: none; color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
 body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
+
 .inline-block{
     display: inline-block;
 }
@@ -14,12 +15,12 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     width: 300px;
     display: inline-block;
 }
+
 .viewSite{
-    display: inline-block;
+    border: 2px solid #000000;
+    padding: 5px 20px;
+    margin: 8px 20px 0 0;
     float: right;
-    border: 1px solid #000;
-    padding: 5px;
-    margin: 5px 50px 0 0;
 }
 .buttonsWright{
     float: right;
@@ -33,4 +34,37 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     border: 2px solid #000;
     padding: 8px 20px;
     margin: 8px 20px 0 0;
+}
+.fastBlock{
+    height: 50px;
+    border-bottom: 1px solid #000000;
+}
+.buttonsPanel{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000000;
+}
+.buttonPanelUp{
+    width: 100%;
+}
+.buttonPanelDown{
+    width: 100%;
+}
+
+.buttonUsers, .buttonTemplate, .buttonSettingsScript, .buttonComments, .buttonEditAds, .buttonStatistic{
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    border: 2px solid #000000;
+    padding: 30px 100px;
+    margin: 8px;
+}
+.widgetPanel{
+    height: 300px;
+    border-bottom: 1px solid #000000;
+}
+.bottomPanel{
+    margin-top: 8px;
+    text-align: center;
 }

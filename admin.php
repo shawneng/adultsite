@@ -27,8 +27,7 @@ $row_num = mysqli_num_rows($query);
 
 <div class="head">
     <h1>Admin Panel</h1>
-    <div class="viewSite"><a href="/">Просмотр сайта</a></div>
-
+    <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
 
 <div class="fastBlock">
@@ -45,9 +44,31 @@ $row_num = mysqli_num_rows($query);
         ?>
     </div>
     <div class="buttonsWright">
-        <div class="editNews inline-block">Edit News</div>
-        <div class="addNews inline-block">Add News</div>
+        <a href="engine/adminPanel/modules/editNews.php" class="editNews inline-block">Edit News</a>
+        <a href="engine/adminPanel/modules/addNews.php" class="addNews inline-block">Add News</a>
     </div>
 </div>
+
+<div class="buttonsPanel">
+    <div class="buttonPanelUp">
+        <a href="" class="buttonUsers inline-block">Users</a>
+        <a href="" class="buttonTemplate inline-block">Edit Template</a>
+        <a href="" class="buttonSettingsScript inline-block">Settings script</a>
+    </div>
+    <div class="buttonPanelDown">
+        <a class="buttonComments inline-block" href="">Comments</a>
+        <a href="" class="buttonEditAds inline-block">Edit ADS</a>
+        <a href="" class="buttonStatistic inline-block">Statistic</a>
+    </div>
+</div>
+
+<div class="widgetPanel">
+
+</div>
+
+<div class="bottomPanel">
+    Copyright 2017
+</div>
+
 </body>
 </html>
