@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
-    if ($_SESSION['checka'] == 2) {
+    if ($_COOKIE['logining'] == 2) {
         echo '
     <div id="profile">';
         if($noavatar){
@@ -27,7 +27,7 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
         </div>
     </div>
     ';
-    } elseif ($_SESSION['checka'] == 1) {
+    } elseif ($_COOKIE['logining'] == 1) {
         echo '
             <div id="auth">
                 <img src="../templete/images/enter.png" alt="" class="enter"><button onclick=\'changeStyleDiv()\' id="access">Войти</button>

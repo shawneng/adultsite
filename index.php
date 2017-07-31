@@ -16,7 +16,7 @@ if ($_POST['close']) {
     unset($_SESSION['checka']);
 }
 // Вывод сообщения "Забыли пароль?"
-if($_SESSION['checka'] == 1){
+if($_COOKIE['logining'] == 1){
     if(!isset($_COOKIE['attemp'])){
         setcookie('attemp', 0);
     }
