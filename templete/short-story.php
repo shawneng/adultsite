@@ -27,7 +27,7 @@ for ($i = 0; $i < $row_num; $i++) {
                 <div class="sinfo">
                     <div class="sviews inline-block"><img src="../templete/images/views.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['views'].'</div></div>
                     <div class="stime inline-block"><img src="../templete/images/time.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['time'].'</div></div>
-                    <div class="slikes inline-block right"><img src="../templete/images/un_like.png" alt="" class="infopngr">'.$info_array['likes'].'</div>
+                    <div class="slikes inline-block right"><a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>'.$info_array['likes'].'</div>
                 </div>
             </div>
 ';
