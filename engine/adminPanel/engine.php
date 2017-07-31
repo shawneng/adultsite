@@ -11,10 +11,7 @@
 <body>
 
 <div class="head">
-    <h1>
-        <?php echo $checkStatus, $checkUser;
-        ?>
-    </h1>
+    <h1>Admin Panel</h1>
     <a href="" class="adminExit">Exit</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>

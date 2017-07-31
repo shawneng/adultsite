@@ -10,8 +10,9 @@ if ($_POST['exit']) {
     unset($_SESSION['login']);
     unset($_SESSION['password']);
     $_SESSION['checka'] = 0;
-    $_SESSION['checkUser'] = 0;
+    //$_SESSION['checkUser'] = 0;
     setcookie('logining', '0', time()+60*60*24,  '/', 'adultsite');
+    setcookie('userStatus', '0');
     header("Location: ../");
 }
 // Закрытие поля авторизации
@@ -49,7 +50,8 @@ $sql = "SELECT status_user FROM users WHERE id = '$id' ";
 $query = mysqli_query($connect_DB, $sql);
 $row = mysqli_fetch_array($query);
 $checkadmin = $row[0];
-$_SESSION['checkUser'] = $checkadmin;
+setcookie('userStatus', $checkadmin);
+//$_SESSION['checkUser'] = $checkadmin;
 
 
 

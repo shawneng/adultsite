@@ -17,7 +17,7 @@ session_start();
 session_reset();
 //$checkStatus = $_SESSION['checka'];
 //$checkUser = $_SESSION['checkUser'];
-if ($_COOKIE['logining'] == 2) {
+if ($_COOKIE['logining'] == 2 && $_COOKIE['userStatus'] == 2) {
     require_once "engine/adminPanel/engine.php";
 }
 else {
