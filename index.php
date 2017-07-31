@@ -11,8 +11,8 @@ if ($_POST['exit']) {
     unset($_SESSION['password']);
     $_SESSION['checka'] = 0;
     //$_SESSION['checkUser'] = 0;
-    setcookie('logining', '0', time()+60*60*24,  '/', 'adultsite');
-    setcookie('userStatus', '0', time()+60*60*24,  '/', 'adultsite');
+    setcookie('logining', '0', time() + 60 * 60 * 24, '/', 'adultsite');
+    setcookie('userStatus', '0', time() + 60 * 60 * 24, '/', 'adultsite');
     header("Location: ../");
 }
 // Закрытие поля авторизации
@@ -20,17 +20,15 @@ if ($_POST['close']) {
     unset($_SESSION['checka']);
 }
 // Вывод сообщения "Забыли пароль?"
-if($_SESSION['checka'] == 1){
-    if(!isset($_COOKIE['attemp'])){
+if ($_SESSION['checka'] == 1) {
+    if (!isset($_COOKIE['attemp'])) {
         setcookie('attemp', 0);
-    }
-    else {
+    } else {
         $attemp = $_COOKIE['attemp'];
         $attemp++;
         setcookie('attemp', $attemp);
     }
-}
-else {
+} else {
     setcookie('attemp', '');
 }
 // Получение и отображение аватарки пользователя
@@ -39,10 +37,9 @@ $sql = "SELECT avatar FROM users WHERE id = '$id' ";
 $query = mysqli_query($connect_DB, $sql);
 $row = mysqli_fetch_array($query);
 $avatar = $row[0];
-if($avatar == "") {
+if ($avatar == "") {
     $noavatar = true;
-}
-else {
+} else {
     $noavatar = false;
 }
 // Проверка на статус пользователя

@@ -5,6 +5,11 @@
  * Date: 31.07.2017
  * Time: 2:30
  */
+
+if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] !=2 ) ) {
+    header('Location: /');
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -16,8 +21,9 @@
     <title>AddNews</title>
 </head>
 <body>
-
-
+<?php
+echo $_COOKIE['logining'], $_COOKIE['userStatus'];
+?>
 
 </body>
 </html>

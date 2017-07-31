@@ -6,6 +6,10 @@
  * Time: 2:29
  */
 
+if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] !=2 ) ) {
+    header('Location: /');
+}
+
 ?>
 <!doctype html>
 <html lang="en">
