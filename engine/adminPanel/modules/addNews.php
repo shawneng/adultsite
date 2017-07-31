@@ -86,16 +86,23 @@ if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
             <input type="submit" name="preview" class="selectPreview" value="Select Preview">
         </label>
     </div>
+</div>
+
+<div class="addPanelRight inline-block">
+    <div class="selectCategories">
+        <span>Categories:</span>
+    </div>
+
+    <div class="showPreview">
+        <span>Preview:</span>
+    </div>
 
     <div class="finalAdd">
         <label>
             <input type="submit" name="buttonAdd" value="Add News" class="buttonAdd">
         </label>
     </div>
-</div>
 
-<div class="showPreview">
-    <span>Preview:</span>
 </div>
 
 </body>
