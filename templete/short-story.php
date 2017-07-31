@@ -15,10 +15,14 @@ for ($i = 0; $i < $row_num; $i++) {
     echo '
         <div class="shortstory inline-block">
             <div class="spre">
+                <a href="/?id='. $id_post .'">
                 <img src="'.$info_array['pre'].'" alt="">
+                </a>
             </div>
             <div class="stitle">
+                <a href="">
                 '.$info_array['title'].'
+                </a>
             </div>
                 <div class="sinfo">
                     <div class="sviews inline-block"><img src="../templete/images/views.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['views'].'</div></div>

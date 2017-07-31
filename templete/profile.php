@@ -22,7 +22,7 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
             <div class="li pointer"><a href="#" class="lipro history trans">История</a></div>
             <div class="li pointer"><a href="#" class="lipro settings trans">Настройки</a></div>
             <form method="post" class="formexit">
-                <input type="submit" name="exit" value="Выйти" class="exit" onclick="opensearch()">
+                <input type="submit" name="exit" value="Выйти" class="exit">
             </form>
         </div>
     </div>

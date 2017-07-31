@@ -50,5 +50,6 @@ $checkadmin = $row[0];
 setcookie('userStatus', $checkadmin);
 
 // Подключение шаблона
-require_once "templete/main.php";
+if ($_GET['id'] > 0) require_once "video.php";
+else require_once "templete/main.php";
 ?>
