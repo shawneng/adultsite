@@ -74,3 +74,18 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     margin-top: 8px;
     text-align: center;
 }
+
+/* Add news styles */
+.addPanel{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.editTitle{
+    text-align: center;
+}
+.inputTitle{
+    height: 20px;
+    width: 400px;
+    margin: 8px;
+}

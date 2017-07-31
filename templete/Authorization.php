@@ -4,7 +4,7 @@
     </form>
 </div>
 <div id="authorization" class="radius">
-    <div class="nameauth ">Авторизация</div>
+    <div class="nameauth">Авторизация</div>
     <form action="../engine/formlogin.php" method="post">
         <div class="login">
             <span>Введите логин:</span>
