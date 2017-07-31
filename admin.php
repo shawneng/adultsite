@@ -19,6 +19,7 @@ session_reset();
 //$checkUser = $_SESSION['checkUser'];
 if ($_COOKIE['logining'] == 2 && $_COOKIE['userStatus'] == 2) {
     require_once "engine/adminPanel/engine.php";
+
 }
 else {
     header("Location: ../");

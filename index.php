@@ -51,9 +51,6 @@ $query = mysqli_query($connect_DB, $sql);
 $row = mysqli_fetch_array($query);
 $checkadmin = $row[0];
 setcookie('userStatus', $checkadmin);
-//$_SESSION['checkUser'] = $checkadmin;
-
-
 
 // Подключение шаблона
 require_once "templete/main.php";
