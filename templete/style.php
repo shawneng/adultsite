@@ -40,6 +40,15 @@ header { width: 100%; height: 42px; background: #1a1a1a;}
 .nava { margin-left: 50px; }
 #navigation { left: 290px; }
 .menu_add { width: 12px; position: relative; top: 2px; left: -10px;}
+.content { margin: 0 auto; width: 1600px; }
+.shortstory { width: 300px; height: 200px; background: #000; margin: 10px 0 0 10px;}
+.spre img {width: 300px; height: 149px;}
+.stitle {font-size: 12px; text-align: center; height: 20px; line-height: 20px;}
+.sinfo { font-size: 11px; height: 20px; line-height: 20px; margin: 3px; }
+.infopng {width: 16px; height: 16px; position: relative; top: 3px; right: 5px; left: 5px;}
+.itext { margin-left: 10px; }
+.infopngr { width: 16px; height: 16px; position: relative; top: 3px; right: 5px; }
+.slikes { margin-right: 5px; }
 </style>
 ';
 ?>
