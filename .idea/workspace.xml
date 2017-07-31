@@ -31,12 +31,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="full-story.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="full-story.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templete/full-story.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
-            <state relative-caret-position="532">
-              <caret line="83" column="46" lean-forward="false" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
+            <state relative-caret-position="736">
+              <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
 =======
             <state relative-caret-position="416">
               <caret line="16" column="141" lean-forward="false" selection-start-line="16" selection-start-column="141" selection-end-line="16" selection-end-column="141" />
@@ -46,12 +46,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="full-story-style.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="full-story-style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templete/css/full-story-style.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
-            <state relative-caret-position="668">
-              <caret line="78" column="63" lean-forward="false" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
+            <state relative-caret-position="736">
+              <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
               <folding />
 =======
             <state relative-caret-position="52">
@@ -116,8 +116,8 @@
       <file leaf-file-name="main-style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templete/css/main-style.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="430">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -140,7 +140,7 @@
             <state relative-caret-position="884">
               <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
               <folding>
-                <marker date="1501541089761" expanded="true" signature="304:592" ph="..." />
+                <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
 =======
             <state relative-caret-position="364">
               <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
@@ -364,7 +364,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-<<<<<<< Updated upstream
           <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/dbsite.sql</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/engine/formlogin.php</PATH>
@@ -373,13 +372,6 @@
           <PATH vcs="Git" revision="">$PROJECT_DIR$/templete/head.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/templete/style.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/video.php</PATH>
-=======
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/engine/adminPanel/css/style.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/engine/adminPanel/modules/addNews.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/engine/adminPanel/modules/functions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templete/Authorization.php</PATH>
->>>>>>> Stashed changes
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -387,11 +379,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-<<<<<<< Updated upstream
           <PATH vcs="Git" revision="">$PROJECT_DIR$/templete/css/full-story-style.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/templete/css/main-style.php</PATH>
-=======
->>>>>>> Stashed changes
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -649,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501539729489</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Edit Admin panel">
+      <created>1501541360962</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1501541360962</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101993000" />
+    <option name="totallyTimeSpent" value="103973000" />
 =======
     <option name="localTasksCounter" value="18" />
     <servers />
@@ -930,7 +926,7 @@
         <state relative-caret-position="884">
           <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
           <folding>
-            <marker date="1501541089761" expanded="true" signature="304:592" ph="..." />
+            <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
           </folding>
 =======
         <state relative-caret-position="255">
@@ -993,28 +989,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video.php">
+    <entry file="file://$PROJECT_DIR$/engine/adminPanel/engine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <marker date="1501538430569" expanded="true" signature="288:317" ph="SELECT * FRO... posts" />
-            <marker date="1501538430569" expanded="true" signature="288:318" ph="SELECT * FRO... posts" />
-            <marker date="1501538430569" expanded="true" signature="288:319" ph="SELECT * FRO... posts" />
-            <marker date="1501538430569" expanded="true" signature="288:564" ph="SELECT * FRO... posts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templete/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        <state relative-caret-position="430">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../localhost/css/bobo.css">
+    <entry file="file://$PROJECT_DIR$/engine/formlogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-156">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1095,11 +1078,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/engine/adminPanel/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
-        <state relative-caret-position="532">
-          <caret line="83" column="46" lean-forward="false" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
+        <state relative-caret-position="663">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding />
 =======
         <state relative-caret-position="566">
@@ -1115,8 +1098,16 @@
     <entry file="file://$PROJECT_DIR$/templete/style.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
-        <state relative-caret-position="668">
-          <caret line="78" column="63" lean-forward="false" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
+        <state relative-caret-position="736">
+          <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/adminPanel/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
 =======
         <state relative-caret-position="0">
           <caret line="9" column="115" lean-forward="false" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />

@@ -77,9 +77,11 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
 
 /* Add news styles */
 .addPanel{
-    width: 100%;
+    width: auto;
     height: auto;
     margin-left: 5px;
+    float: left;
+    margin-top: 10px;
 }
 .inputTitle, .inputVideoLink, .inputScreenLink{
     height: 20px;
@@ -95,4 +97,27 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     height: 20px;
     width: 100px;
     margin: 8px;
+}
+.viewPreview{
+    text-align: center;
+}
+.selectPreview{
+    width: 200px;
+    height: 50px;
+}
+.showPreview{
+    float: left;
+    width: auto;
+    height: auto;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.finalAdd{
+    width: 100%;
+    text-align: center;
+}
+.buttonAdd{
+    margin: 10px;
+    width: 200px;
+    height: 50px;
 }

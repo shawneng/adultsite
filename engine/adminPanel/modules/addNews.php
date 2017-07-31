@@ -49,7 +49,7 @@ if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
         <span>Description: </span>
         <div>
             <label>
-                <input name="description" class="inputDescription">
+                <textarea name="description" class="inputDescription"></textarea>
             </label>
         </div>
     </div>
@@ -58,7 +58,7 @@ if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
         <span>Keywords: </span>
         <div>
             <label>
-                <input name="keywords" class="inputKeywords">
+                <textarea name="keywords" class="inputKeywords"></textarea>
             </label>
         </div>
     </div>
@@ -81,6 +81,21 @@ if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
         </div>
     </div>
 
+    <div class="viewPreview">
+        <label>
+            <input type="submit" name="preview" class="selectPreview" value="Select Preview">
+        </label>
+    </div>
+
+    <div class="finalAdd">
+        <label>
+            <input type="submit" name="buttonAdd" value="Add News" class="buttonAdd">
+        </label>
+    </div>
+</div>
+
+<div class="showPreview">
+    <span>Preview:</span>
 </div>
 
 </body>
