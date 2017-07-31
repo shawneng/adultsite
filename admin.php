@@ -12,6 +12,15 @@ $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("О�
 $sql = "SELECT `id` FROM `users`";
 $query = mysqli_query($connect_DB, $sql);
 $row_num = mysqli_num_rows($query);
+
+session_start();
+session_reset();
+$checkStatus = $_SESSION['checka'];
+$checkUser = $_SESSION['checkUser'];
+if (($checkStatus !== 2) && ($checkUser !== 2)) {
+    header("Location: ../");
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,7 +35,11 @@ $row_num = mysqli_num_rows($query);
 <body>
 
 <div class="head">
-    <h1>Admin Panel</h1>
+    <h1>
+        <?php echo $checkStatus, $checkUser;
+        ?>
+    </h1>
+    <a href="" class="adminExit">Exit</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
 

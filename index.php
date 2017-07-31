@@ -9,6 +9,8 @@ $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("О�
 if ($_POST['exit']) {
     unset($_SESSION['login']);
     unset($_SESSION['password']);
+    $_SESSION['checka'] = 0;
+    $_SESSION['checkUser'] = 0;
     header("Location: ../");
 }
 // Закрытие поля авторизации
@@ -16,7 +18,7 @@ if ($_POST['close']) {
     unset($_SESSION['checka']);
 }
 // Вывод сообщения "Забыли пароль?"
-if($_COOKIE['logining'] == 1){
+if($_SESSION['checka'] == 1){
     if(!isset($_COOKIE['attemp'])){
         setcookie('attemp', 0);
     }
@@ -46,6 +48,7 @@ $sql = "SELECT status_user FROM users WHERE id = '$id' ";
 $query = mysqli_query($connect_DB, $sql);
 $row = mysqli_fetch_array($query);
 $checkadmin = $row[0];
+$_SESSION['checkUser'] = $checkadmin;
 
 
 

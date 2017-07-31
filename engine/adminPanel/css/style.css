@@ -22,6 +22,12 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     margin: 8px 20px 0 0;
     float: right;
 }
+.adminExit{
+    border: 2px solid #000000;
+    padding: 5px 20px;
+    margin: 8px 20px 0 0;
+    float: right;
+}
 .buttonsWright{
     float: right;
 }
