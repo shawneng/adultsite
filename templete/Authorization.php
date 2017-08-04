@@ -25,5 +25,5 @@
             <a href="/registration.php" class="registr textcenter radius inline-block right trans">Регистрация</a>
         </div>
     </form>
-    <?php if ($_COOKIE['attemp'] > 3) echo '<div class="forgot textcenter"><a href="#">Забыли пароль?</a></div>'; ?>
+    <?php if ($_COOKIE['attemp'] >= 3) echo '<div class="forgot textcenter"><a href="#">Забыли пароль?</a></div>'; ?>
 </div>

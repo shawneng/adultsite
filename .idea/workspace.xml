@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1ec5f015-2bde-43a4-aa0f-90c6c6ac1ca2" name="Default" comment="Edit Admin panel">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine/adminPanel/css/style.css" afterPath="$PROJECT_DIR$/engine/adminPanel/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine/adminPanel/modules/addNews.php" afterPath="$PROJECT_DIR$/engine/adminPanel/modules/addNews.php" />
-=======
+      =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templete/css/full-story-style.php" afterPath="$PROJECT_DIR$/templete/css/full-story-style.php" />
->>>>>>> Stashed changes
+      >>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,13 +33,13 @@
       <file leaf-file-name="full-story.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templete/full-story.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <state relative-caret-position="736">
-              <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
-=======
+            <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+            =======
             <state relative-caret-position="416">
               <caret line="16" column="141" lean-forward="false" selection-start-line="16" selection-start-column="141" selection-end-line="16" selection-end-column="141" />
->>>>>>> Stashed changes
+              >>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -49,17 +48,17 @@
       <file leaf-file-name="full-story-style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templete/css/full-story-style.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <state relative-caret-position="736">
-              <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
-              <folding />
-=======
+            <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+            <folding />
+            =======
             <state relative-caret-position="52">
               <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
               <folding>
                 <marker date="1501541421427" expanded="true" signature="12:57" ph="..." />
               </folding>
->>>>>>> Stashed changes
+              >>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -77,19 +76,19 @@
       <file leaf-file-name="style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templete/style.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <state relative-caret-position="221">
-              <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-              <folding>
-                <marker date="1501541089757" expanded="true" signature="375:402" ph="SELECT `logi... users" />
-                <marker date="1501541089757" expanded="true" signature="747:804" ph="SELECT `pass... users" />
-                <marker date="1501541089757" expanded="true" signature="1052:1103" ph="SELECT `id` users" />
-              </folding>
-=======
+            <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            <folding>
+              <marker date="1501541089757" expanded="true" signature="375:402" ph="SELECT `logi... users" />
+              <marker date="1501541089757" expanded="true" signature="747:804" ph="SELECT `pass... users" />
+              <marker date="1501541089757" expanded="true" signature="1052:1103" ph="SELECT `id` users" />
+            </folding>
+            =======
             <state relative-caret-position="0">
               <caret line="9" column="115" lean-forward="false" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />
               <folding />
->>>>>>> Stashed changes
+              >>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -97,18 +96,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <state relative-caret-position="255">
-              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-=======
+            <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <folding />
+            =======
             <state relative-caret-position="566">
               <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
               <folding>
                 <marker date="1501541379012" expanded="true" signature="1137:1178" ph="SELECT avata... users" />
                 <marker date="1501541379012" expanded="true" signature="1398:1444" ph="SELECT statu... users" />
               </folding>
->>>>>>> Stashed changes
+              >>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -136,12 +135,12 @@
       <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templete/head.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <state relative-caret-position="884">
-              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-              <folding>
-                <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
-=======
+            <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+            <folding>
+            <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
+            =======
             <state relative-caret-position="364">
               <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
@@ -165,7 +164,7 @@
                 <marker date="1501537199614" expanded="true" signature="788:897" ph="..." />
                 <marker date="1501537199614" expanded="true" signature="816:878" ph="..." />
                 <marker date="1501537199614" expanded="true" signature="933:1479" ph="..." />
->>>>>>> Stashed changes
+                >>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -218,12 +217,12 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/engine/adminPanel/modules/functions.php" />
-<<<<<<< Updated upstream
+        <<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/engine/adminPanel/engine.php" />
         <option value="$PROJECT_DIR$/templete/Authorization.php" />
         <option value="$PROJECT_DIR$/engine/adminPanel/modules/addNews.php" />
         <option value="$PROJECT_DIR$/engine/adminPanel/css/style.css" />
-=======
+        =======
         <option value="$PROJECT_DIR$/engine/adminPanel/modules/addNews.php" />
         <option value="$PROJECT_DIR$/engine/adminPanel/modules/editNews.php" />
         <option value="$PROJECT_DIR$/templete/profile.php" />
@@ -237,7 +236,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/templete/css/full-story-style.php" />
->>>>>>> Stashed changes
+        >>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -623,7 +622,7 @@
       <option name="project" value="LOCAL" />
       <updated>1501534187675</updated>
     </task>
-<<<<<<< Updated upstream
+    <<<<<<< Updated upstream
     <task id="LOCAL-00018" summary="Edit Admin panel">
       <created>1501536673190</created>
       <option name="number" value="00018" />
@@ -650,13 +649,13 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="103973000" />
-=======
+    =======
     <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="101978000" />
->>>>>>> Stashed changes
+    >>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1616" height="886" extended-state="6" />
@@ -784,7 +783,7 @@
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
+    <<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/templete/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -793,8 +792,8 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> Stashed changes
+    =======
+    >>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/engine/adminPanel/admin.php" />
     <entry file="file://$PROJECT_DIR$/engine/formregistration.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -922,13 +921,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+        <<<<<<< Updated upstream
         <state relative-caret-position="884">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding>
-            <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
-          </folding>
-=======
+        <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <folding>
+          <marker date="1501541597067" expanded="true" signature="304:592" ph="..." />
+        </folding>
+        =======
         <state relative-caret-position="255">
           <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding />
@@ -946,7 +945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
->>>>>>> Stashed changes
+          >>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -973,11 +972,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/formlogin.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+        <<<<<<< Updated upstream
         <state relative-caret-position="255">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-=======
+        <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <folding />
+        =======
         <state relative-caret-position="622">
           <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding>
@@ -985,7 +984,7 @@
             <marker date="1501538165802" expanded="true" signature="747:804" ph="SELECT `pass... users" />
             <marker date="1501538165802" expanded="true" signature="1052:1103" ph="SELECT `id` users" />
           </folding>
->>>>>>> Stashed changes
+          >>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1026,11 +1025,11 @@
         <state relative-caret-position="442">
           <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="125" />
           <folding>
-<<<<<<< Updated upstream
+            <<<<<<< Updated upstream
             <marker date="1501541089757" expanded="true" signature="375:402" ph="SELECT `logi... users" />
             <marker date="1501541089757" expanded="true" signature="747:804" ph="SELECT `pass... users" />
             <marker date="1501541089757" expanded="true" signature="1052:1103" ph="SELECT `id` users" />
-=======
+            =======
             <marker date="1501537199614" expanded="true" signature="14:38" ph="SELECT `id` posts" />
             <marker date="1501537199614" expanded="true" signature="127:164" ph="SELECT max(`... posts" />
             <marker date="1501537199614" expanded="true" signature="384:429" ph="SELECT * FRO... posts" />
@@ -1041,7 +1040,7 @@
             <marker date="1501537199614" expanded="true" signature="788:897" ph="..." />
             <marker date="1501537199614" expanded="true" signature="816:878" ph="..." />
             <marker date="1501537199614" expanded="true" signature="933:1479" ph="..." />
->>>>>>> Stashed changes
+            >>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1080,24 +1079,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/adminPanel/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+        <<<<<<< Updated upstream
         <state relative-caret-position="663">
-          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding />
-=======
+        <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <folding />
+        =======
         <state relative-caret-position="566">
           <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
           <folding>
             <marker date="1501541379012" expanded="true" signature="1137:1178" ph="SELECT avata... users" />
             <marker date="1501541379012" expanded="true" signature="1398:1444" ph="SELECT statu... users" />
           </folding>
->>>>>>> Stashed changes
+          >>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templete/style.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
+        <<<<<<< Updated upstream
         <state relative-caret-position="736">
           <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
           <folding />
@@ -1107,11 +1106,11 @@
     <entry file="file://$PROJECT_DIR$/engine/adminPanel/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
-          <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
-=======
+        <caret line="120" column="12" lean-forward="false" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+        =======
         <state relative-caret-position="0">
           <caret line="9" column="115" lean-forward="false" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />
->>>>>>> Stashed changes
+          >>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
