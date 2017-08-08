@@ -34,11 +34,16 @@ for ($i = 0; $i < $row_num; $i++) {
                     <div class="sviews inline-block"><img src="../templete/images/views.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['views'].'</div></div>
                     <div class="stime inline-block"><img src="../templete/images/time.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['time'].'</div></div>
                     <div class="slikes inline-block right">';
-    if (in_array($id_post_k, $like_array)){
-        echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=1"><img src="../templete/images/like.png" alt="" class="infopngr"></a>';
+    if ($_COOKIE['logining'] == 2) {
+        if (in_array($id_post_k, $like_array)){
+            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=1"><img src="../templete/images/like.png" alt="" class="infopngr"></a>';
+        }
+        else{
+            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=2"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
+        }
     }
-    else{
-        echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=2"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
+    else {
+        echo '<a href="/"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
     }
 
     echo $info_array['likes'].'</div>
