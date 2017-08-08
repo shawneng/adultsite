@@ -49,7 +49,7 @@ if (isset($_GET['id'])) {
     </div>
     <?php
     for ($i = $cat_num[0]; $i >= 1; $i--) {
-        $sql = "SELECT `*` FROM `categories` WHERE `id` = '$i'";
+        $sql = "SELECT * FROM `categories` WHERE `id` = '$i'";
         $query = mysqli_query($connect_DB, $sql);
         $infoArray = mysqli_fetch_assoc($query);
 
