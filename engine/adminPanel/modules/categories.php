@@ -33,22 +33,20 @@ if (isset($_GET['id'])) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/engine/adminPanel/css/style.css" rel="stylesheet">
-    <title>Edit Categories</title>
+    <title>Categories</title>
 </head>
 <body>
 <div class="head">
-    <a href="../engine.php"><h1>Categories</h1></a>
-    <a href="../engine.php" class="adminExit">Admin Panel</a>
+    <a href="/admin.php"><h1>Categories</h1></a>
+    <a href="/admin.php" class="adminExit">Admin Panel</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
 
 <div class="table">
     <span>Categories</span>
-    <div class="addCategory inline-block">
-        <a href="">Add Category</a>
-    </div>
+    <a href="addCategory.php" class="addCategory"><b>Add Category</b></a>
     <?php
-    for ($i = $cat_num[0]; $i >= 1; $i--) {
+    for ($i = 1; $i <= $cat_num[0]; $i++) {
         $sql = "SELECT * FROM `categories` WHERE `id` = '$i'";
         $query = mysqli_query($connect_DB, $sql);
         $infoArray = mysqli_fetch_assoc($query);
@@ -59,7 +57,7 @@ if (isset($_GET['id'])) {
             <span>| Name: ' . $infoArray['name'] . ' |</span>
             <span>| Videos: ' . $infoArray['videos'] . ' |</span>
             </a>
-            <div class="btDelete"><a href="?id=' . $infoArray['id'] . ' ">Delete</a></div>
+            <div class="btDelete"><a href="?id=' . $infoArray['id'] . ' "><b>Delete</a></b></div>
     ';
         }
 

@@ -2,34 +2,30 @@
 /**
  * Created by PhpStorm.
  * User: anton
- * Date: 08.08.2017
- * Time: 21:01
+ * Date: 09.08.2017
+ * Time: 0:06
  */
+
 if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
     header('Location: /');
 }
+
 require_once '../modules/db_config.php';
 $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
 
-$id = $_GET['id'];
-
-$sql = "SELECT * FROM `categories` WHERE `id` = '$id'";
+$sql = "SELECT `id` FROM `categories`";
 $query = mysqli_query($connect_DB, $sql);
-$infoArray = mysqli_fetch_assoc($query);
+$id = mysqli_num_rows($query);
 
 $name = $_POST['name'];
 $title = $_POST['title'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 
-if(isset($_POST['btSaveCat'])){
-    $sql = "UPDATE `categories` SET `name` = '$name', `title` = '$title', `description` = '$description', `keywords` = '$keywords' WHERE `id` = '$id'";
-    $query = mysqli_query($connect_DB, $sql);
-    header("Location: categories.php");
-}
-
-if(isset($_POST['btDeleteCat'])){
-    $sql = "DELETE FROM `categories` WHERE `categories`.`id` = '$id'";
+if (isset($_POST['btAddCat']) && $_POST['name']!='') {
+    $id++;
+    $sql = "INSERT INTO `categories` (`id`, `name`, `title`, `description`, `keywords`, `videos`) 
+                VALUE ('$id', '$name', '$title', '$description', '$keywords', '0' )";
     $query = mysqli_query($connect_DB, $sql);
     header("Location: categories.php");
 }
@@ -43,12 +39,11 @@ if(isset($_POST['btDeleteCat'])){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/engine/adminPanel/css/style.css" rel="stylesheet">
-    <title>Edit Category</title>
+    <title>Add Category</title>
 </head>
 <body>
-
 <div class="head">
-    <a href="categories.php"><h1>Edit Category</h1></a>
+    <a href="categories.php"><h1>Add Category</h1></a>
     <a href="/admin.php" class="adminExit">Admin Panel</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
@@ -58,51 +53,34 @@ if(isset($_POST['btDeleteCat'])){
         <span>Name*: </span>
         <div class="editName">
             <label>
-                <input name="name" class="inputName" value="<?php echo $infoArray['name']; ?>">
+                <input name="name" class="inputName">
             </label>
         </div>
 
         <span>Title: </span>
         <div class="editTitle">
             <label>
-                <input name="title" class="inputTitle" value="<?php echo $infoArray['title']; ?>">
+                <input name="title" class="inputTitle">
             </label>
         </div>
 
         <span>Description: </span>
         <div class="editDescription">
             <label>
-                <textarea name="description" class="inputDescription"><?php
-                echo $infoArray['description'];
-                    ?></textarea>
+                <textarea name="description" class="inputDescription"></textarea>
             </label>
         </div>
 
         <span>Keywords: </span>
         <div class="editKeywords">
             <label>
-                <textarea name="keywords" class="inputKeywords"><?php
-                echo $infoArray['keywords'];
-                    ?></textarea>
+                <textarea name="keywords" class="inputKeywords"></textarea>
             </label>
         </div>
 
-        <span><b>| ID: <?php
-                echo $id;
-                ?> |</b></span>
-        <span><b>| Videos: <?php
-                echo $infoArray['videos'];
-                ?> | </b></span>
-
-        <div class="saveCategoryBt">
+        <div class="addCategoryBt">
             <label>
-                <input type="submit" name="btSaveCat" class="btAddCat" value="Save Category">
-            </label>
-        </div>
-
-        <div class="deleteCategoryBt">
-            <label>
-                <input type="submit" name="btDeleteCat" class="btDeleteCat" value="Delete Category">
+                <input type="submit" name="btAddCat" class="btAddCat" value="Add Category">
             </label>
         </div>
 

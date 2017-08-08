@@ -44,9 +44,9 @@ if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
     <title>AddNews</title>
 </head>
 <div class="head">
-    <a href="../engine.php"><h1>Add News</h1></a>
+    <a href="/admin.php"><h1>Add News</h1></a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
-    <a class="viewSite inline-block" href="../engine.php">Admin Panel</a>
+    <a class="viewSite inline-block" href="/admin.php">Admin Panel</a>
 </div>
 
 <form method="post">
