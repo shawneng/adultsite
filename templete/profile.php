@@ -19,7 +19,7 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
         echo '
             <div class="li pointer"><a href="#" class="lipro profile trans">Мой профиль</a></div>
             <div class="li pointer"><a href="#" class="lipro favorites trans">Мое любимое</a></div>
-            <div class="li pointer"><a href="#" class="lipro history trans">История</a></div>
+            <div class="li pointer"><a href="?history" class="lipro history trans">История</a></div>
             <div class="li pointer"><a href="#" class="lipro settings trans">Настройки</a></div>
             <form method="post" class="formexit">
                 <input type="submit" name="exit" value="Выйти" class="exit">

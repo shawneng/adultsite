@@ -1,18 +1,12 @@
 <?php
-// Получение видео которые лайкнув пользователь
-$sql = "SELECT likes_video FROM users WHERE id = '$id'";
+$sql = "SELECT `history` FROM `users` WHERE id = '$id'";
 $query = mysqli_query($connect_DB, $sql);
-$likes_array = mysqli_fetch_array($query);
-$likes = $likes_array[0];
-$like_array = explode(' ', $likes);
-// Вывод видео
-$sql = "SELECT `id` FROM `posts`";
-$query = mysqli_query($connect_DB, $sql);
-$row_num = mysqli_num_rows($query);
-$sql = "SELECT max(`id`) as `id` FROM `posts`";
-$query = mysqli_query($connect_DB, $sql);
-$maxId_array = mysqli_fetch_array($query);
-$maxId = $maxId_array[0];
+$history_video_a = mysqli_fetch_array($query);
+$history_video_id = explode(', ', $history_video_a[0]);
+$num_videos = count($history_video_id);
+print_r($history_video_id);
+echo $num_videos;
+/*$maxId = $maxId_array[0];
 echo '<div class="content">';
 for ($i = 0; $i < $row_num; $i++) {
     $id_post = $maxId - $i;
@@ -53,5 +47,5 @@ for ($i = 0; $i < $row_num; $i++) {
             </div>
     ';
 }
-echo '</div>';
+echo '</div>';*/
 ?>
