@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <div class="head">
-    <a href="../engine.php"><h1>Edit Categories</h1></a>
+    <a href="../engine.php"><h1>Categories</h1></a>
     <a href="../engine.php" class="adminExit">Admin Panel</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>

@@ -6,6 +6,7 @@ require_once 'engine/db_config.php';
 // Connectin to DB and check
 $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
 $id_video = $_GET['id'];
+$id = $_SESSION['id'];
 $id_video_for_a = $id_video . ",";
 $sql = "SELECT * FROM posts WHERE id = '$id_video'";
 $query = mysqli_query($connect_DB, $sql);
@@ -13,7 +14,7 @@ $info_array = mysqli_fetch_assoc($query);
 $views = $info_array['views'] + 1;
 $sql = "UPDATE `posts` SET `views` = '$views' WHERE `posts`.`id` = $id_video";
 $query = mysqli_query($connect_DB, $sql);
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users WHERE `id` = '$id'";
 $query = mysqli_query($connect_DB, $sql);
 $info_user = mysqli_fetch_assoc($query);
 if ($info_user['history'] == null) {
