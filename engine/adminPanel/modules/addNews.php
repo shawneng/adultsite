@@ -23,7 +23,7 @@ $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 $time = $_POST['time'];
 
-if (isset($_POST['buttonAdd'])) {
+if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
     $row_num++;
     $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`) 
                             VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords')";

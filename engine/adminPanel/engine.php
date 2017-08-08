@@ -44,7 +44,7 @@
     <div class="buttonPanelDown">
         <a class="buttonComments inline-block" href="">Comments</a>
         <a href="" class="buttonEditAds inline-block">Edit ADS</a>
-        <a href="" class="buttonStatistic inline-block">Statistic</a>
+        <a href="engine/adminPanel/modules/categories.php" class="buttonStatistic inline-block">Categories</a>
     </div>
 </div>
 
