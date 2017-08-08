@@ -6,12 +6,23 @@
  * Time: 20:02
  */
 
+if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
+    header('Location: /');
+}
+
 require_once '../modules/db_config.php';
 $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
 
-$sql = "SELECT `id` FROM `categories`";
+$sql = "SELECT max(`id`) as `id` FROM `categories`";
 $query = mysqli_query($connect_DB, $sql);
-$cat_num = mysqli_num_rows($query);
+$cat_num = mysqli_fetch_array($query);
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "DELETE FROM `categories` WHERE `categories`.`id` = '$id'";
+    $query = mysqli_query($connect_DB, $sql);
+    header("Location: categories.php");
+}
 
 ?>
 <!doctype html>
@@ -26,8 +37,8 @@ $cat_num = mysqli_num_rows($query);
 </head>
 <body>
 <div class="head">
-    <h1>Edit Categories</h1>
-    <a href="" class="adminExit">Exit</a>
+    <a href="../engine.php"><h1>Edit Categories</h1></a>
+    <a href="../engine.php" class="adminExit">Admin Panel</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
 
@@ -37,15 +48,21 @@ $cat_num = mysqli_num_rows($query);
         <a href="">Add Category</a>
     </div>
     <?php
-    for ($i = 1; $i <= $cat_num; $i++) {
+    for ($i = $cat_num[0]; $i >= 1; $i--) {
         $sql = "SELECT `*` FROM `categories` WHERE `id` = '$i'";
         $query = mysqli_query($connect_DB, $sql);
         $infoArray = mysqli_fetch_assoc($query);
 
-        echo '<a href="#" class = "showCategories">
-            <span>' . $infoArray['id'] . '</span>
-            <span>' . $infoArray['name'] . '</span>
-    </a>';
+        if ($infoArray['id'] != '') {
+            echo '<a href="editCategories.php?id=' . $infoArray['id'] . '" class = "showCategories">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Name: ' . $infoArray['name'] . ' |</span>
+            <span>| Videos: ' . $infoArray['videos'] . ' |</span>
+            </a>
+            <div class="btDelete"><a href="?id=' . $infoArray['id'] . ' ">Delete</a></div>
+    ';
+        }
+
     }
     ?>
 </div>

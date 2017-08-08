@@ -30,8 +30,8 @@
         ?>
     </div>
     <div class="buttonsWright">
-        <a href="engine/adminPanel/modules/editNews.php" class="editNews inline-block">Edit News</a>
-        <a href="engine/adminPanel/modules/addNews.php" class="addNews inline-block">Add News</a>
+        <a href="modules/editNews.php" class="editNews inline-block">Edit News</a>
+        <a href="modules/addNews.php" class="addNews inline-block">Add News</a>
     </div>
 </div>
 
@@ -44,7 +44,7 @@
     <div class="buttonPanelDown">
         <a class="buttonComments inline-block" href="">Comments</a>
         <a href="" class="buttonEditAds inline-block">Edit ADS</a>
-        <a href="engine/adminPanel/modules/categories.php" class="buttonStatistic inline-block">Categories</a>
+        <a href="modules/categories.php" class="buttonStatistic inline-block">Categories</a>
     </div>
 </div>
 
