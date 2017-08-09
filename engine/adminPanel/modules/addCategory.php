@@ -21,11 +21,12 @@ $name = $_POST['name'];
 $title = $_POST['title'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
+$avatar = $_POST['avatar'];
 
 if (isset($_POST['btAddCat']) && $_POST['name']!='') {
     $id++;
-    $sql = "INSERT INTO `categories` (`id`, `name`, `title`, `description`, `keywords`, `videos`) 
-                VALUE ('$id', '$name', '$title', '$description', '$keywords', '0' )";
+    $sql = "INSERT INTO `categories` (`id`, `name`, `title`, `description`, `keywords`, `videos`, `avatar`) 
+                VALUE ('$id', '$name', '$title', '$description', '$keywords', '0', '$avatar' )";
     $query = mysqli_query($connect_DB, $sql);
     header("Location: categories.php");
 }
@@ -76,6 +77,16 @@ if (isset($_POST['btAddCat']) && $_POST['name']!='') {
             <label>
                 <textarea name="keywords" class="inputKeywords"></textarea>
             </label>
+        </div>
+
+        <span>Avatar: </span>
+        <div class="editAvatar">
+            <label>
+                <input name="avatar" class="inputAvatar">
+            </label>
+            <div>
+                <img src="<?php echo $infoArray['avatar']; ?>" class="editAv">
+            </div>
         </div>
 
         <div class="addCategoryBt">

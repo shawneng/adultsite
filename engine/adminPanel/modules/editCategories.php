@@ -21,9 +21,10 @@ $name = $_POST['name'];
 $title = $_POST['title'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
+$avatar = $_POST['avatar'];
 
 if(isset($_POST['btSaveCat'])){
-    $sql = "UPDATE `categories` SET `name` = '$name', `title` = '$title', `description` = '$description', `keywords` = '$keywords' WHERE `id` = '$id'";
+    $sql = "UPDATE `categories` SET `name` = '$name', `title` = '$title', `description` = '$description', `keywords` = '$keywords', `avatar` = '$avatar' WHERE `id` = '$id'";
     $query = mysqli_query($connect_DB, $sql);
     header("Location: categories.php");
 }
@@ -85,6 +86,16 @@ if(isset($_POST['btDeleteCat'])){
                 echo $infoArray['keywords'];
                     ?></textarea>
             </label>
+        </div>
+
+        <span>Avatar: </span>
+        <div class="editAvatar">
+            <label>
+                <input name="avatar" class="inputAvatar" value="<?php echo $infoArray['avatar']; ?>">
+            </label>
+            <div>
+                <img src="<?php echo $infoArray['avatar']; ?>" class="editAv">
+            </div>
         </div>
 
         <span><b>| ID: <?php
