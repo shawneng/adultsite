@@ -28,7 +28,7 @@ if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
     $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`) 
                             VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords')";
     $query = mysqli_query($connect_DB, $sql);
-    header("Location: ../modules/addNews.php");
+    header("Location: ../modules/news.php");
 }
 
 ?>
@@ -43,6 +43,7 @@ if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
     <link href="/engine/adminPanel/css/style.css" rel="stylesheet">
     <title>AddNews</title>
 </head>
+<body>
 <div class="head">
     <a href="/admin.php"><h1>Add News</h1></a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>

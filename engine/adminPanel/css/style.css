@@ -131,6 +131,11 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     width: 300px;
     height: 50px;
 }
+.buttonDel{
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+}
 
 /*Edit Categories*/
 .table{
@@ -140,7 +145,7 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     line-height: 30px;
     padding-left: 10px;
 }
-.addCategory{
+.addCategory, .addNews1{
     float: right;
     border-left: 1px solid #000000;
     padding: 0 10px;
@@ -179,4 +184,25 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     margin: 20px;
     width: 300px;
     height: 50px;
+}
+
+/*news*/
+.showNews{
+    border: 1px solid #000;
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    display: block;
+}
+.btDeleteN{
+    margin-right: 10px;
+    float: right;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    top: -40px;
+    right: 10px;
+    border-left: 1px solid #000000;
+    padding-left: 15px;
 }

@@ -30,7 +30,7 @@
         ?>
     </div>
     <div class="buttonsWright">
-        <a href="/engine/adminPanel/modules/editNews.php" class="editNews inline-block">Edit News</a>
+        <a href="/engine/adminPanel/modules/news.php" class="editNews inline-block">Edit News</a>
         <a href="/engine/adminPanel/modules/addNews.php" class="addNews inline-block">Add News</a>
     </div>
 </div>
