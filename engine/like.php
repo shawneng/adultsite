@@ -34,5 +34,5 @@ if ($_GET['like'] == 2) {
 }
 $sql = "UPDATE `posts` SET `likes` = '$likes' WHERE `posts`.`id` = '$id_post'";
 $query = mysqli_query($connect_DB, $sql);
-header("Location: ../");
+header("Location: ".$_SERVER['HTTP_REFERER']);
 ?>
