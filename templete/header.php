@@ -19,7 +19,7 @@
                     if (!empty($info_cat)) {
                         echo '
                             <li class="cat inline-block">
-                                <a href="#">
+                                <a href="?categorie='.$i.'">
                                     <div class="catimg"><img src="'.$info_cat['avatar'].'" alt="" class="avacat"></div>
                                     <div class="cattitle">'.$info_cat['name'].'</div>
                                 </a>

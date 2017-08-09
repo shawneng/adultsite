@@ -17,5 +17,8 @@ if (!$_GET){
 if (isset($_GET['history'])){
     require_once "engine/history.php";
 }
+if(isset($_GET['categorie'])) {
+    require_once "engine/categorie.php";
+}
 require_once "bottom.php";
 ?>
