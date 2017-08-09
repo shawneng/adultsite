@@ -5,18 +5,30 @@
         </div>
         <div id="navigation">
             <a href="/" class="nava">Главная</a>
-            <span class="nava pointer inline-block" id="cat" onmousemove="openCat()" onmouseout="closeCat()">Категории</span>
+            <span class="nava pointer inline-block" id="cat" onmousemove="openCat()"
+                  onmouseout="closeCat()">Категории</span>
             <a href="#" class="nava">Porno Stars</a>
         </div>
         <nav>
-        <ul class="cats" id="cats" onmousemove="openCat()" onmouseout="closeCat()" hidden="0">
-            <li class="cat">
-                <a href="#">
-                <div class="catimg"><img src="../uploads/categories/anal.jpg" alt="" class="avacat"></div>
-                <div class="cattitle">Анал</div>
-                </a>
-            </li>
-        </ul>
+            <ul class="cats" id="cats" onmousemove="openCat()" onmouseout="closeCat()" hidden="0">
+                <?php
+                for ($i = 1; $i <= $num_cat[0]; $i++) {
+                    $sql = "SELECT * FROM categories WHERE id = '$i'";
+                    $query = mysqli_query($connect_DB, $sql);
+                    $info_cat = mysqli_fetch_assoc($query);
+                    if (!empty($info_cat)) {
+                        echo '
+                            <li class="cat inline-block">
+                                <a href="#">
+                                    <div class="catimg"><img src="'.$info_cat['avatar'].'" alt="" class="avacat"></div>
+                                    <div class="cattitle">'.$info_cat['name'].'</div>
+                                </a>
+                            </li>
+                        ';
+                    }
+                }
+                ?>
+            </ul>
         </nav>
         <div id="search" class="right">
             <form action="../search.php" id="formsearch">

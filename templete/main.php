@@ -6,6 +6,9 @@ $history_video_id = explode(', ', $history_video_a[0]);
 $num_videos = count($history_video_id);
 $num_videos = $num_videos-1;
 $numh = $num_videos;
+$sql = "SELECT max(id) as id FROM `categories`";
+$query = mysqli_query($connect_DB, $sql);
+$num_cat = mysqli_fetch_array($query);
 require_once "head.php";
 require_once "header.php";
 if (!$_GET){
