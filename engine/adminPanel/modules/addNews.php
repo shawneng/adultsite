@@ -6,12 +6,12 @@
  * Time: 2:30
  */
 
-require_once '../modules/db_config.php';
-$connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
-
 if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
     header('Location: /');
 }
+
+require_once '../modules/db_config.php';
+$connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
 
 $sql = "SELECT `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);

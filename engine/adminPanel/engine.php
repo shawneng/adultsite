@@ -37,7 +37,7 @@
 
 <div class="buttonsPanel">
     <div class="buttonPanelUp">
-        <a href="" class="buttonUsers inline-block">Users</a>
+        <a href="/engine/adminPanel/modules/users.php" class="buttonUsers inline-block">Users</a>
         <a href="" class="buttonTemplate inline-block">Edit Template</a>
         <a href="" class="buttonSettingsScript inline-block">Settings script</a>
     </div>

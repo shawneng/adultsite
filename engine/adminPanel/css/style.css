@@ -83,7 +83,7 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     float: left;
     margin-top: 10px;
 }
-.inputTitle, .inputVideoLink, .inputScreenLink{
+.inputTitle, .inputVideoLink, .inputScreenLink, .inputEmail{
     height: 20px;
     width: 400px;
     margin: 8px;
@@ -145,12 +145,12 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     line-height: 30px;
     padding-left: 10px;
 }
-.addCategory, .addNews1{
+.addCategory, .addNews1, .addUser{
     float: right;
     border-left: 1px solid #000000;
     padding: 0 10px;
 }
-.showCategories{
+.showCategories, .showUsers{
     border: 1px solid #000;
     margin-top: 10px;
     height: 25px;
@@ -171,17 +171,17 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
 }
 
 /* Add category */
-.addCategoryPanel{
+.addCategoryPanel, .editUserPanel{
     margin: 8px;
     text-align: center;
 }
-.inputName{
+.inputName, .inputLogin, .inputAvatar{
     height: 20px;
     width: 400px;
     margin: 8px;
 }
-.btAddCat, .btDeleteCat{
-    margin: 20px;
+.btAddCat, .btDeleteCat, .btSaveUser, .btDeleteUser{
+    margin: 10px;
     width: 300px;
     height: 50px;
 }
@@ -205,4 +205,19 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     right: 10px;
     border-left: 1px solid #000000;
     padding-left: 15px;
+}
+
+/*Users*/
+.inputStatus{
+    text-align: center;
+    height: 20px;
+    width: 100px;
+    margin: 8px;
+}
+.editAv{
+    width: 100px;
+    height: 100px;
+}
+.showId, .showHistory{
+    margin: 10px;
 }
