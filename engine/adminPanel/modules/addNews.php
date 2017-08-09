@@ -31,8 +31,8 @@ if (isset($_POST['buttonAdd']) && ($_POST['title'] != '')) {
     $row_num++;
     $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`) 
                             VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords')";
-    $query = mysqli_query($connect_DB, $sql);
-    header("Location: ../modules/news.php");
+    //$query = mysqli_query($connect_DB, $sql);
+    //header("Location: ../modules/news.php");
 }
 
 ?>
@@ -122,16 +122,20 @@ if (isset($_POST['buttonAdd']) && ($_POST['title'] != '')) {
             <span>Categories*: </span>
             <?php
 
-            for ($i = 1; $i <= $cat_num; $i++) {
-                echo '
-            
-            <input type="checkbox" value="1" id="cat1" name="catCheck">
-            <label for = "cat1" >
-            Cat1
-            </label>
-            ';
+            for ($i = 1; $i <= $cat_num[0]; $i++) {
+                $sql = "SELECT * FROM `categories` WHERE `id` = '$i'";
+                $query = mysqli_query($connect_DB, $sql);
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '       
+                    <input type="checkbox" value=' . $infoArray['id'] . ' id="cat' . $i . '" name="catCheck[]">
+                    <label for = "cat' . $i . '" > ' . $infoArray['name'] . ' </label>
+                    ';
+                }
             }
             ?>
+
         </div>
 
         <div class="showPreview">
