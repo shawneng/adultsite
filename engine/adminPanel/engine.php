@@ -18,13 +18,13 @@
 
 <div class="fastBlock">
     <div class="viewUsers inline-block">
-        <span>Пользователей: </span>
+        <a href="/engine/adminPanel/modules/users.php"><span>Users: </span>
         <?php
         echo $row_num;
-        ?>
+        ?></a>
     </div>
     <div class="viewCache inline-block">
-        <span>Кэш: </span>
+        <span>Cache: </span>
         <?php
         //Змінна Кеша
         ?>
@@ -39,7 +39,7 @@
     <div class="buttonPanelUp">
         <a href="/engine/adminPanel/modules/users.php" class="buttonUsers inline-block">Users</a>
         <a href="" class="buttonTemplate inline-block">Edit Template</a>
-        <a href="" class="buttonSettingsScript inline-block">Settings script</a>
+        <a href="/engine/adminPanel/modules/settingsScript.php" class="buttonSettingsScript inline-block">Settings script</a>
     </div>
     <div class="buttonPanelDown">
         <a class="buttonComments inline-block" href="">Comments</a>
