@@ -17,13 +17,17 @@ $sql = "SELECT `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
 $row_num = mysqli_num_rows($query);
 
+$sql = "SELECT max(`id`) as `id` FROM `categories`";
+$query = mysqli_query($connect_DB, $sql);
+$cat_num = mysqli_fetch_array($query);
+
 $title = $_POST['title'];
 $videoLink = $_POST['videoLink'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 $time = $_POST['time'];
 
-if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
+if (isset($_POST['buttonAdd']) && ($_POST['title'] != '')) {
     $row_num++;
     $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`) 
                             VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords')";
@@ -116,6 +120,18 @@ if (isset($_POST['buttonAdd']) && ($_POST['title']!='')) {
     <div class="addPanelRight inline-block">
         <div class="selectCategories">
             <span>Categories*: </span>
+            <?php
+
+            for ($i = 1; $i <= $cat_num; $i++) {
+                echo '
+            
+            <input type="checkbox" value="1" id="cat1" name="catCheck">
+            <label for = "cat1" >
+            Cat1
+            </label>
+            ';
+            }
+            ?>
         </div>
 
         <div class="showPreview">

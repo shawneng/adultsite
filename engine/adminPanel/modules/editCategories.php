@@ -54,7 +54,7 @@ if(isset($_POST['btDeleteCat'])){
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
 
-<form method="post">
+<form method="post" id="formCategory">
     <div class="addCategoryPanel">
         <span>Name*: </span>
         <div class="editName">
@@ -91,10 +91,10 @@ if(isset($_POST['btDeleteCat'])){
         <span>Avatar: </span>
         <div class="editAvatar">
             <label>
-                <input name="avatar" class="inputAvatar" value="<?php echo $infoArray['avatar']; ?>">
+                <input id="ava" name="avatar" class="inputAvatar" value="<?php echo $infoArray['avatar']; ?>">
             </label>
             <div>
-                <img src="<?php echo $infoArray['avatar']; ?>" class="editAv">
+                <img onclick="changeImg(this)" src="<?php echo $infoArray['avatar']; ?>" class="editAv">
             </div>
         </div>
 
@@ -119,6 +119,13 @@ if(isset($_POST['btDeleteCat'])){
 
     </div>
 </form>
+
+<script>
+    function changeImg(source) {
+        var link = document.forms["formCategory"].elements["ava"].value;
+        source.src = link;
+    }
+</script>
 
 </body>
 </html>
