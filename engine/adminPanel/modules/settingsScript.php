@@ -5,6 +5,27 @@
  * Date: 31.07.2017
  * Time: 12:49
  */
+
+if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
+    header('Location: /');
+}
+require_once '../modules/db_config.php';
+$connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
+
+$sql = "SELECT * FROM `settings` WHERE `id` = 1";
+$query = mysqli_query($connect_DB, $sql);
+$infoArray = mysqli_fetch_assoc($query);
+
+$nameSite = $_POST['nameSite'];
+$description = $_POST['descriptionSite'];
+$keywords = $_POST['keywordsSite'];
+
+if(isset($_POST['buttonSaveSettings'])){
+    $sql = "UPDATE `settings` SET `name_site` = '$nameSite', `descr_site` = '$description', `keywords` = '$keywords' WHERE `settings`.`id` = 1";
+    $query = mysqli_query($connect_DB, $sql);
+    header("Location: /admin.php");
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,7 +45,35 @@
 </div>
 
 <form method="post">
+    <div class="settingsPanel">
+        <span>Name Site: </span>
+        <div class="editNameSite">
+            <label>
+                <input name="nameSite" class="inputNameSite" value="<?php echo $infoArray['name_site'];?>">
+            </label>
+        </div>
 
+        <span>Description Site:</span>
+        <div class="editDescriptionSite">
+            <label>
+                <textarea name="descriptionSite" class="inputDescriptionSite"><?php echo $infoArray['descr_site'];?></textarea>
+            </label>
+        </div>
+
+        <span>Keywords: </span>
+        <div class="editKeywordsSite">
+            <label>
+                <textarea name="keywordsSite" class="inputKeywordsSite"><?php echo $infoArray['keywords'];?></textarea>
+            </label>
+        </div>
+
+        <div class="saveSettings">
+            <label>
+                <input type="submit" name="buttonSaveSettings" value="Save Settings" class="btSaveSettings">
+            </label>
+        </div>
+
+    </div>
 </form>
 
 </body>

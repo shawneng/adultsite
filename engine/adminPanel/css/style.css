@@ -88,7 +88,7 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     width: 400px;
     margin: 8px;
 }
-.inputDescription, .inputKeywords{
+.inputDescription, .inputKeywords, .inputDescriptionSite, .inputKeywordsSite{
     height: 80px;
     width: 400px;
     margin: 8px;
@@ -175,12 +175,12 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     margin: 8px;
     text-align: center;
 }
-.inputName, .inputLogin, .inputAvatar{
+.inputName, .inputLogin, .inputAvatar, .inputNameSite{
     height: 20px;
     width: 400px;
     margin: 8px;
 }
-.btAddCat, .btDeleteCat, .btSaveUser, .btDeleteUser{
+.btAddCat, .btDeleteCat, .btSaveUser, .btDeleteUser, .btSaveSettings{
     margin: 10px;
     width: 300px;
     height: 50px;
@@ -220,4 +220,9 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
 }
 .showId, .showHistory{
     margin: 10px;
+}
+
+/*settings*/
+.settingsPanel{
+    text-align: center;
 }
