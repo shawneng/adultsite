@@ -25,3 +25,9 @@ function opensearch() {
 function closesearch() {
     document.getElementById('formsearch').style.display = 'none';
 }
+function openCat() {
+    document.getElementById('cats').removeAttribute('hidden', 0);
+}
+function closeCat() {
+    document.getElementById('cats').setAttribute('hidden', 0);
+}

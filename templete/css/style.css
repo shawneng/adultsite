@@ -13,7 +13,7 @@
 .registr:hover {background: #2580cc;}
 .errorlogin { width: 290px; height: 50px; line-height:50px; position: absolute; background: #a50303; left:50%; margin-left: -145px;  top: 122px; z-index: 1000;}
 .forgot {z-index: 1000; width: 440px; height: 50px; background: #1a1a1a; line-height: 50px; border-top: 1px solid #2580CC;}
-#loginmenu { background: #1a1a1a; width: 230px; position: absolute; margin-left: -75px; padding-top: 7px;}
+#loginmenu { background: #1a1a1a; width: 230px; position: absolute; margin-left: -75px; padding-top: 7px; top: 42px;}
 .li { height: 40px; line-height: 40px; display: block;}
 .exit { height: 40px; background: url("../images/exit_black.png") no-repeat 7px!important;color: #c0c0c0!important; padding-left: 50px; margin-bottom: 7px;}
 .exit:hover {background: url("../images/exit_white.png") no-repeat 7px!important;}
@@ -33,3 +33,7 @@
 .block1 { width: 150px; margin-left: 33px;}
 .formexit { margin-left: 27px; }
 .numh {position: relative;display: inline-block; left: 15px; color: #1a1a1a; background: #ece7e7; height: 20px; line-height: 20px; width: 20px; border-radius: 10px; font-size: 12px;}
+.cats { position: absolute; width: 100%; background: #c0c0c0; z-index: 100; max-width: 1600px;}
+.cat {width: 240px; height: 180px;margin: 10px 0 0 10px;}
+.avacat { width: 240px; }
+.cattitle { position: relative; height: 30px; text-align: center; background: rgba(0,0,0,0.5);top:-34px; line-height: 30px;}

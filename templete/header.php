@@ -5,9 +5,19 @@
         </div>
         <div id="navigation">
             <a href="/" class="nava">Главная</a>
-            <a href="#" class="nava">Категории</a>
+            <span class="nava pointer inline-block" id="cat" onmousemove="openCat()" onmouseout="closeCat()">Категории</span>
             <a href="#" class="nava">Porno Stars</a>
         </div>
+        <nav>
+        <ul class="cats" id="cats" onmousemove="openCat()" onmouseout="closeCat()" hidden="0">
+            <li class="cat">
+                <a href="#">
+                <div class="catimg"><img src="../uploads/categories/anal.jpg" alt="" class="avacat"></div>
+                <div class="cattitle">Анал</div>
+                </a>
+            </li>
+        </ul>
+        </nav>
         <div id="search" class="right">
             <form action="../search.php" id="formsearch">
                 <div id="poisk">Быстрый поиск</div>
