@@ -13,7 +13,7 @@
 .registr:hover {background: #2580cc;}
 .errorlogin { width: 290px; height: 50px; line-height:50px; position: absolute; background: #a50303; left:50%; margin-left: -145px;  top: 122px; z-index: 1000;}
 .forgot {z-index: 1000; width: 440px; height: 50px; background: #1a1a1a; line-height: 50px; border-top: 1px solid #2580CC;}
-#loginmenu { background: #1a1a1a; width: 230px; position: absolute; margin-left: -75px; padding-top: 7px; top: 42px;}
+#loginmenu { background: #1a1a1a; width: 230px; position: absolute; margin-left: -300px; padding-top: 7px; top: 42px; z-index: 1000;}
 .li { height: 40px; line-height: 40px; display: block;}
 .exit { height: 40px; background: url("../images/exit_black.png") no-repeat 7px!important;color: #c0c0c0!important; padding-left: 50px; margin-bottom: 7px;}
 .exit:hover {background: url("../images/exit_white.png") no-repeat 7px!important;}

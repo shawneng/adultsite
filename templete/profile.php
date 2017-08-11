@@ -3,14 +3,13 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
     if ($_COOKIE['logining'] == 2) {
         echo '
     <div id="profile">';
-        if($noavatar){
+        if ($noavatar) {
             echo '<div class="avatar"><img src="../templete/images/no_avatar.png" alt="" class="noavatar"></div>';
-        }
-        else {
-            echo '<div class="avatar"><img src="'. $avatar .'" alt="" class="eavatar"></div>';
+        } else {
+            echo '<div class="avatar"><img src="' . $avatar . '" alt="" class="eavatar"></div>';
         }
         echo '
-        <div id="profilenav" class="textcenter pointer inline-block" onmouseover="openloginmenu()" onmouseout="closeloginmenu()">' . $_SESSION['login'] . '</div> 
+        <div id="profilenav" class="textcenter pointer inline-block" onmouseover="openloginmenu()" onmouseout="closeloginmenu()">' . $_SESSION['login'] . '</div>
         <div class="profileadd inline-block"><img src="../templete/images/menu_open.png" alt="" class="menu_add"></div>
     </div>
     <div id="loginmenu" class="textcenter radius" onmouseover="openloginmenu()" onmouseout="closeloginmenu()">
