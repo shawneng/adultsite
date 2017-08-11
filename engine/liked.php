@@ -1,14 +1,7 @@
 <?php
-// Вывод видео
-$sql = "SELECT `history` FROM `users` WHERE id = '$id'";
-$query = mysqli_query($connect_DB, $sql);
-$history_array = mysqli_fetch_array($query);
-$videos_history = explode(', ', $history_array[0]);
-$count_a = count($videos_history);
-$videos_history = array_reverse($videos_history);
 echo '<div class="content">';
-for ($i = 1; $i < $count_a; $i++) {
-    $id_post = (int)$videos_history[$i];
+for ($i = 0; $i < $count_a; $i++) {
+    $id_post = (int)$like_array[$i];
     $sql = "SELECT * FROM `posts` WHERE `id` = '$id_post'";
     $query = mysqli_query($connect_DB, $sql);
     $info_array = mysqli_fetch_assoc($query);

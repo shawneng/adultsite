@@ -18,6 +18,7 @@
 .exit { height: 40px; background: url("../images/exit_black.png") no-repeat 7px!important;color: #c0c0c0!important; padding-left: 50px; margin-bottom: 7px;}
 .exit:hover {background: url("../images/exit_white.png") no-repeat 7px!important;}
 .lipro { display: inline-block; height: 40px; padding-left: 50px;}
+#liked { width: 200px!important; margin-left: -20px;}
 .proi { position: relative; top: 7px; margin-right: 10px; }
 .panel {background: url("../images/admin_panel_black.png") no-repeat 7px;}
 .panel:hover {background: url("../images/admin_panel_white.png") no-repeat 7px;}

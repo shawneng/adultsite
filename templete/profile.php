@@ -18,7 +18,7 @@ if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
         if ($checkadmin == 2) echo '<div class="li pointer"><a href="../admin.php" class="lipro panel trans">Админ панель</a></div>';
         echo '
             <div class="li pointer"><a href="#" class="lipro profile trans">Мой профиль</a></div>
-            <div class="li pointer"><a href="#" class="lipro favorites trans">Мое любимое</a></div>
+            <div id="liked" class="li pointer"><a href="?liked" class="lipro favorites trans">Мое любимое</a><div class="numh">'. $count_a .'</div></div>
             <div class="li pointer"><a href="?history" class="lipro history trans">История</a><div class="numh">'. $numh .'</div></div>
             <div class="li pointer"><a href="#" class="lipro settings trans">Настройки</a></div>
             <form method="post" class="formexit">
