@@ -47,7 +47,7 @@ header { width: 100%; height: 42px; background: #1a1a1a;}
 #logo a { font-size: 18px!important; }
 #access {  height: 42px; margin-right: 50px; }
 .enter { width: 16px; position: relative; top: 3px; left: -10px;}
-#profile { margin-right: 50px; position: relative; top:-42px;}
+#profile, #auth { margin-right: 50px; position: relative; top: -42px;}
 #profilenav { height: 42px; line-height: 42px; width: 100px; }
 .avatar { position: absolute; border: 1px solid #fff; border-radius: 20px; width: 26px; height: 26px; margin: 8px 0 0 -20px; overflow: hidden;}
 .eavatar { width: 26px;}

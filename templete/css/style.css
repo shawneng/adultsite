@@ -35,5 +35,5 @@
 .numh {position: relative;display: inline-block; left: 15px; color: #1a1a1a; background: #ece7e7; height: 20px; line-height: 20px; width: 20px; border-radius: 10px; font-size: 12px;}
 .cats { position: absolute; width: 100%; background: #1a1a1a; z-index: 100; max-width: 1600px;}
 .cat {width: 240px; height: 180px;margin: 10px 0 0 10px;}
-.avacat { width: 240px; }
+.avacat { width: 240px; height: 136px;}
 .cattitle { position: relative; height: 30px; text-align: center; background: rgba(0,0,0,0.5);top:-34px; line-height: 30px;}

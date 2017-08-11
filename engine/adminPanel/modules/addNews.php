@@ -26,13 +26,14 @@ $videoLink = $_POST['videoLink'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 $time = $_POST['time'];
-
-if (isset($_POST['buttonAdd']) && ($_POST['title'] != '')) {
+if (isset($_POST['buttonAdd']) && !empty($_POST['title'])) {
     $row_num++;
-    $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`) 
-                            VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords')";
-    //$query = mysqli_query($connect_DB, $sql);
-    //header("Location: ../modules/news.php");
+    $cats_f_check = $_POST['catCheck'];
+    $cats = implode(", ", $cats_f_check);
+    $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`, `categories`) 
+                            VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords', '$cats')";
+    $query = mysqli_query($connect_DB, $sql);
+    header("Location: ../modules/news.php");
 }
 
 ?>
