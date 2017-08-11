@@ -16,6 +16,7 @@ $maxId_array = mysqli_fetch_array($query);
 $maxId = $maxId_array[0];
 for ($i = 0; $i < $maxId; $i++) {
     $id_post = $maxId - $i;
+    $id_post_k = $id_post . ",";
     $sql = "SELECT categories FROM `posts` WHERE id = '$id_post'";
     $query = mysqli_query($connect_DB, $sql);
     $cats_in_video = mysqli_fetch_array($query);
