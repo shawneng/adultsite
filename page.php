@@ -16,7 +16,6 @@ $maxId = $maxId - $c_videos;
 echo '<div class="content">';
 for ($i = 0; $i < $videos ; $i++) {
     $id_post = $maxId - $i;
-    $id_post_k = $id_post . ",";
     $sql = "SELECT * FROM `posts` WHERE `id` = '$id_post'";
     $query = mysqli_query($connect_DB, $sql);
     $info_array = mysqli_fetch_assoc($query);
@@ -37,7 +36,7 @@ for ($i = 0; $i < $videos ; $i++) {
                     <div class="stime inline-block"><img src="../templete/images/time.png" alt="" class="infopng"><div class="itext inline-block">'.$info_array['time'].'</div></div>
                     <div class="slikes inline-block right">';
     if ($_COOKIE['logining'] == 2) {
-        if (in_array($id_post_k, $like_array)){
+        if (in_array($id_post, $like_array)){
             echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=1"><img src="../templete/images/like.png" alt="" class="infopngr"></a>';
         }
         else{
