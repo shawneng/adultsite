@@ -1,4 +1,10 @@
 <?php
+// Получение видео которые лайкнув пользователь
+$sql = "SELECT likes_video FROM users WHERE id = '$id'";
+$query = mysqli_query($connect_DB, $sql);
+$likes_array = mysqli_fetch_array($query);
+$likes = $likes_array[0];
+$like_array = explode(' ', $likes);
 $sql = "SELECT `history` FROM `users` WHERE id = '$id'";
 $query = mysqli_query($connect_DB, $sql);
 $history_video_a = mysqli_fetch_array($query);
@@ -30,6 +36,9 @@ if(isset($_GET['categorie'])) {
 }
 if(isset($_GET['liked'])) {
     require_once "engine/liked.php";
+}
+if(isset($_GET['page'])) {
+    require_once "page.php";
 }
 require_once "bottom.php";
 ?>

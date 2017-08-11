@@ -1,10 +1,4 @@
 <?php
-// Получение видео которые лайкнув пользователь
-$sql = "SELECT likes_video FROM users WHERE id = '$id'";
-$query = mysqli_query($connect_DB, $sql);
-$likes_array = mysqli_fetch_array($query);
-$likes = $likes_array[0];
-$like_array = explode(' ', $likes);
 // Вывод видео
 $sql = "SELECT `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
@@ -16,8 +10,11 @@ $maxId = $maxId_array[0];
 $pages = $row_num / 10;
 $pages = (int)$pages;
 $pages++;
+$c_videos = ($_GET['page']-1) * 10;
+$videos = $row_num - $c_videos;
+$maxId = $maxId - $c_videos;
 echo '<div class="content">';
-for ($i = 0; $i < 10 ; $i++) {
+for ($i = 0; $i < $videos ; $i++) {
     $id_post = $maxId - $i;
     $id_post_k = $id_post . ",";
     $sql = "SELECT * FROM `posts` WHERE `id` = '$id_post'";
