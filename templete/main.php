@@ -40,5 +40,8 @@ if(isset($_GET['liked'])) {
 if(isset($_GET['page'])) {
     require_once "page.php";
 }
+if(is_array($_GET['search'])){
+    require_once "search.php";
+}
 require_once "bottom.php";
 ?>

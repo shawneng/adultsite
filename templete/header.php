@@ -31,7 +31,7 @@
             </ul>
         </nav>
         <div id="search" class="right">
-            <form action="../search.php" id="formsearch">
+            <form action="/" id="formsearch">
                 <div id="poisk">Быстрый поиск</div>
                 <label>
                     <input class="search radius" id="opensearch" name="search">
