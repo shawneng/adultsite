@@ -206,6 +206,17 @@ body { color: #000; font-size: 14px; font-family: "Roboto Light", Arial, serif;}
     border-left: 1px solid #000000;
     padding-left: 15px;
 }
+.sortPanel{
+    border: 1px solid #000;
+    margin-top: 10px;
+    height: 60px;
+    line-height: 30px;
+    padding-left: 10px;
+    display: block;
+}
+.sortId{
+    width: 100px;
+}
 
 /*Users*/
 .inputStatus{

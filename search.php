@@ -1,9 +1,9 @@
 <?php
 echo '<div class="showRequest">'. $_GET['search']. '</div>';
 
-$sql = "SELECT max(`id`) as `id` FROM `posts`";
+/*$sql = "SELECT max(`id`) as `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
-$news_num = mysqli_fetch_array($query);
+$news_num = mysqli_fetch_array($query);*/
 
 $sql = "SELECT * FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
@@ -51,7 +51,7 @@ while($row = mysqli_fetch_array($query)){
     }
 }
 
-if($n=0){
+if($n==0){
     echo 'false';
 }
 
