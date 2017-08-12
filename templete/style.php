@@ -47,17 +47,18 @@ header { width: 100%; height: 42px; background: #1a1a1a;}
 #logo a { font-size: 18px!important; }
 #access {  height: 42px; margin-right: 50px; }
 .enter { width: 16px; position: relative; top: 3px; left: -10px;}
-#profile { margin-top: -42px; }
+#profile, #auth { margin-top: -42px; }
+#auth { height: 42px; line-height: 42px; margin-right: 30px;}
 #profilenav { height: 42px; line-height: 42px; width: 100px; margin: 0 60px 0 -200px; }
 .profileadd {margin-left: -50px;}
 .avatar { position: absolute; border: 1px solid #fff; border-radius: 20px; width: 26px; height: 26px; margin: 8px 0 0 -230px; overflow: hidden;}
 .eavatar { width: 26px;}
 .noavatar{ width: 13px; margin: 7px 0 0 7px;}
 #loginmenu {display: none;}
-#search { display: inline-block; width: 42px; height: 24px;}
+#search { display: inline-block; width: 42px; height: 24px; margin-top: -42px;}
 .search { height: 20px; background: #fff; width: 180px; margin-left: 10px; padding-left: 5px; }
-.subsearch { width: 42px; height: 42px; position: absolute; top: 9px;}
-#formsearch { background: #1a1a1a;height: 60px;width:250px;margin-top: 42px;margin-left: -208px; display: none;}
+.subsearch { width: 42px; height: 42px; position: absolute; top: 9px; line-height: 42px;}
+#formsearch { background: #1a1a1a; height: 60px; width:250px; margin-top: 42px;margin-left: -208px; display: none; z-index: 10000;}
 #poisk { margin: 0 0 5px 10px; padding-top: 5px; }
 .closesearch {position: relative; top: -22px; left: 213px; width: 24px; cursor: pointer}
 #navigation { position: relative; display: inline-block; left: 30%; margin-left: -200px; width: 400px; height: 42px; line-height: 42px;}

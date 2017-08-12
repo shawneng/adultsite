@@ -43,5 +43,28 @@ if(isset($_GET['page'])) {
 if(is_array($_GET['search'])){
     require_once "search.php";
 }
+// Кнопка выхода из аккаунта
+if ($_GET['exit']) {
+    unset($_SESSION['login']);
+    unset($_SESSION['password']);
+    $_SESSION['checka'] = 0;
+    //$_SESSION['checkUser'] = 0;
+    setcookie('logining', '0', time() + 60 * 60 * 24, '/', 'adultsite');
+    setcookie('userStatus', '0', time() + 60 * 60 * 24, '/', 'adultsite');
+    header('Location: ..' . $_SERVER['REQUEST_URI']);
+}
+if ($_COOKIE['userStatus'] == 2) {
+    echo '<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="../admin.php"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>';
+}
 require_once "bottom.php";
 ?>
