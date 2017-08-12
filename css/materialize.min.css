@@ -6,12 +6,12 @@
 body {background-color: #323232;}
 .ver-center { position: relative; top: -5px;}
 .avatar {width: 34px; top: 6px; position: relative; right: 10px;}
-.row {width: 308px; background: #212121; display: inline-block; color: #fff; margin-right: 5px!important;}
+.row {width: 255px; background: #212121; display: inline-block; color: #fff; margin-right: 5px!important;}
 .row a {color: #fff;}
 .card-content {height: 50px;}
 .content {min-width: 1000px; max-width: 1580px; margin: 0 auto; }
 .inline-block {display: inline-block!important;}
-.card-image img {height: 173px;}
+.card-image img {height: 143px;}
 .itext {position: relative; top: -8px; margin: 0 10px;}
 .center_p {position: relative; left: 50%; margin-left: -10%;}
 .search {position: relative; top: 1px; width: 400px!important; height: 30px!important; line-height: 30px!important; padding-left: 10px!important; display: inline-block; border: 1px solid #fff!important; border-radius: 3px!important;}

@@ -17,7 +17,7 @@ $pages = $row_num / 10;
 $pages = (int)$pages;
 $pages++;
 echo '<div class="content">';
-for ($i = 0; $i < $row_num ; $i++) {
+for ($i = 0; $i < 18 ; $i++) {
     $id_post = $maxId - $i;
     $id_post_k = $id_post . ",";
     $sql = "SELECT * FROM `posts` WHERE `id` = '$id_post'";
