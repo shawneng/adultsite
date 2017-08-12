@@ -6,7 +6,7 @@
  * Time: 2:29
  */
 
-if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] !=2 ) ) {
+if (($_COOKIE['logining'] != 2) || ($_COOKIE['userStatus'] != 2)) {
     header('Location: /');
 }
 require_once '../modules/db_config.php';
@@ -16,6 +16,10 @@ $sql = "SELECT max(`id`) as `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
 $news_num = mysqli_fetch_array($query);
 
+//$sort = false;
+$max = $news_num[0];
+$min = 1;
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '$id'";
@@ -24,6 +28,7 @@ if (isset($_GET['id'])) {
 }
 
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -43,28 +48,85 @@ if (isset($_GET['id'])) {
 </div>
 
 <div class="table">
-    <span>News</span>
-    <a href="addNews.php" class="addNews1"><b>Add News</b></a>
-    <?php
+    <div>
+        <span>News: </span>
+        <a href="addNews.php" class="addNews1"><b>Add News</b></a>
+    </div>
 
-    for ($i = $news_num[0]; $i >= 1; $i--) {
-        $sql = "SELECT * FROM `posts` WHERE `id` = '$i'";
-        $query = mysqli_query($connect_DB, $sql);
-        $infoArray = mysqli_fetch_assoc($query);
+    <div class="sortPanel">
+        <div>
+            <form action="editNews.php">
+                <label>
+                    <input name="id" type="number" class="inputId" value="<?php echo $_GET['id']; ?>">
+                    <input name="inputIdBt" type="submit" class="btIdIn" value="Open news by id">
+                </label>
+            </form>
+        </div>
 
-        if ($infoArray['id'] != '') {
-            echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+        <div>
+            <form>
+                <label>
+                    <input name="request" value="<?php echo $_GET['request']; ?>">
+                    <input type="submit" name="search" value="Search">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div>
+        <?php
+
+        if (isset($_GET['request']) && $_GET['request'] != '') {
+
+            $sql = "SELECT * FROM `posts`";
+            $query = mysqli_query($connect_DB, $sql);
+
+            $arraySearch = explode(" ", $_GET['request']);
+
+            $n = 0;
+
+            while ($infoArray = mysqli_fetch_array($query)) {
+                $search = $infoArray['title'];
+                $arrayNews = explode(" ", $search);
+
+                if (array_intersect($arraySearch, $arrayNews)) {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
             <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
             <span>| Title: ' . $infoArray['title'] . ' |</span>
             <span>| Time: ' . $infoArray['time'] . ' |</span>
             <span>| Views: ' . $infoArray['views'] . ' |</span>
             <span>| Likes: ' . $infoArray['likes'] . ' |</span>
             </a>
-            <a href="?id=' . $infoArray['id'] . ' " class="btDeleteN"><b>Delete</b></a>
-    ';
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                    $n++;
+                }
+            }
+            if ($n == 0) {
+                echo 'false';
+            }
         }
-    }
-    ?>
+
+        else {
+            for ($i = $max; $i >= $min; $i--) {
+                $sql = "SELECT * FROM `posts` WHERE `id` = '$i'";
+                $query = mysqli_query($connect_DB, $sql);
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+        }
+        ?>
+    </div>
 </div>
 
 </body>
