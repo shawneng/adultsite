@@ -22,7 +22,29 @@ $num_cat = mysqli_fetch_array($query);
 require_once "head.php";
 require_once "header.php";
 if (!$_GET){
-    require_once "short-story.php";
+    // Вывод видео
+    echo '<div class="content">';
+    $sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
+    $query = mysqli_query($connect_DB, $sql);
+    $row_num = mysqli_num_rows($query);
+    $pages = $row_num / 10;
+    $pages = (int)$pages;
+    $pages++;
+    for ($i = 0; $i < 18; $i++) {
+        require "short-story.php";
+    }
+    echo '<ul class="pagination">';
+    $active_page = (int)$_GET['page'];
+    for ($i = 1; $i <= $pages; $i++) {
+        if ($i == 1) {
+            echo '<li class="active"><a href="?page=' . $i . '">' . $i . '</a></li>';
+        } else {
+            echo '
+        <li class="waves-effect"><a href="?page=' . $i . '">' . $i . '</a></li>
+        ';
+        }
+    }
+    echo '<li class="waves-effect"><a href="?page=2"><i class="material-icons">chevron_right</i></a></li></ul>';
 }
 if ($_GET['id']) {
     require_once "video.php";
