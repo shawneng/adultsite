@@ -26,12 +26,16 @@ $videoLink = $_POST['videoLink'];
 $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 $time = $_POST['time'];
+$date = date("Y-m-d H:i:s");
+
+//echo $date;
+
 if (isset($_POST['buttonAdd']) && !empty($_POST['title'])) {
     $row_num++;
     $cats_f_check = $_POST['catCheck'];
     $cats = implode(", ", $cats_f_check);
-    $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`, `categories`) 
-                            VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords', '$cats')";
+    $sql = "INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`, `categories`, `date`) 
+                            VALUES ('$row_num', '$title', '', '$description', '$time', '0', '0', '', '$keywords', '$cats', '$date')";
     $query = mysqli_query($connect_DB, $sql);
     header("Location: ../modules/news.php");
 }
@@ -141,6 +145,14 @@ if (isset($_POST['buttonAdd']) && !empty($_POST['title'])) {
 
         <div class="showPreview">
             <span>Preview: </span>
+        </div>
+
+        <div class="showDate">
+            <b><span>Date: </span>
+                <?php
+                echo $date;
+                ?>
+            </b>
         </div>
 
         <div class="finalAdd">
