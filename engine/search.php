@@ -1,5 +1,4 @@
 <?php
-echo '<div class="showRequest">'. $_GET['search']. '</div>';
 
 /*$sql = "SELECT max(`id`) as `id` FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
@@ -8,12 +7,17 @@ $news_num = mysqli_fetch_array($query);*/
 $sql = "SELECT * FROM `posts`";
 $query = mysqli_query($connect_DB, $sql);
 
-$arraySearch = explode(" ", $_GET['search']);
+$request = $_GET['search'];
+$request = mb_strtolower($request);
+echo '<div class="showRequest">'. $request. '</div>';
+
+$arraySearch = explode(" ", $request);
 
 $n = 0;
 
 while($row = mysqli_fetch_array($query)){
     $search = $row['title'];
+    $search = mb_strtolower($search);
     $arrayNews = explode(" ", $search);
 
     if(array_intersect($arraySearch, $arrayNews)){

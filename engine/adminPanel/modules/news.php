@@ -80,12 +80,17 @@ if (isset($_GET['id'])) {
             $sql = "SELECT * FROM `posts`";
             $query = mysqli_query($connect_DB, $sql);
 
-            $arraySearch = explode(" ", $_GET['request']);
+            $request = $_GET['request'];
+            $request = mb_strtolower($request);
+            $request = mb_strtolower($request);
+
+            $arraySearch = explode(" ", $request);
 
             $n = 0;
 
             while ($infoArray = mysqli_fetch_array($query)) {
                 $search = $infoArray['title'];
+                $search = mb_strtolower($search);
                 $arrayNews = explode(" ", $search);
 
                 if (array_intersect($arraySearch, $arrayNews)) {
