@@ -125,7 +125,6 @@ if (isset($_GET['id'])) {
                 $request = str_replace($lat, $rus, $request);
                 $request = mb_strtolower($request);
                 $arraySearch = explode(" ", $request);
-                echo $request. ' ';
 
                 //print_r($arraySearch);
 
@@ -135,6 +134,11 @@ if (isset($_GET['id'])) {
                     $arrayNews = explode(" ", $search);
 
                     if (array_intersect($arraySearch, $arrayNews)) {
+                        $n++;
+                        if($n == 1){
+                            //переведений запрос треба вивести норм, це коли знайдено з переведеним
+                            echo $request;
+                        }
                         echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
             <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
             <span>| Title: ' . $infoArray['title'] . ' |</span>
