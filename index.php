@@ -41,6 +41,6 @@ setcookie('userStatus', $checkadmin);
 // Подключение шаблона
 if ($_GET['id'] > 0) require_once "video.php";
 else require_once "templete/main.php";
-if ($_GET['search'] !== "" ) require_once "search.php";
-else require_once "templete/main.php";
+////if ($_GET['search'] !== "" ) require_once "engine/search.php";
+//else require_once "templete/main.php";
 ?>

@@ -40,18 +40,8 @@ if(isset($_GET['liked'])) {
 if(isset($_GET['page'])) {
     require_once "page.php";
 }
-if(is_array($_GET['search'])){
-    require_once "search.php";
-}
-// Кнопка выхода из аккаунта
-if ($_GET['exit']) {
-    unset($_SESSION['login']);
-    unset($_SESSION['password']);
-    $_SESSION['checka'] = 0;
-    //$_SESSION['checkUser'] = 0;
-    setcookie('logining', '0', time() + 60 * 60 * 24, '/', 'adultsite');
-    setcookie('userStatus', '0', time() + 60 * 60 * 24, '/', 'adultsite');
-    header('Location: ..' . $_SERVER['REQUEST_URI']);
+if(isset($_GET['search'])){
+    require_once "engine/search.php";
 }
 if ($_COOKIE['userStatus'] == 2) {
     echo '<div class="fixed-action-btn horizontal">

@@ -47,7 +47,7 @@ for ($i = 0; $i < 18 ; $i++) {
             echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=2"><i class="material-icons">favorite_border</i></a>';
         }
     }
-    else {
+    elseif ($_COOKIE['logining'] !== 2) {
         echo '<a href="/"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
     }
 
