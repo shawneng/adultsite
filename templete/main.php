@@ -1,4 +1,11 @@
 <?php
+$sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
+$query = mysqli_query($connect_DB, $sql);
+$row_num = mysqli_num_rows($query);
+$info_array = mysqli_fetch_assoc($query);
+$pages = $row_num / 10;
+$pages = (int)$pages;
+$pages++;
 // Получение видео которые лайкнув пользователь
 $sql = "SELECT likes_video FROM users WHERE id = '$id'";
 $query = mysqli_query($connect_DB, $sql);
@@ -26,12 +33,6 @@ require_once "header.php";
 if (!$_GET){
     // Вывод видео
     echo '<div class="content">';
-    $sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
-    $query = mysqli_query($connect_DB, $sql);
-    $row_num = mysqli_num_rows($query);
-    $pages = $row_num / 10;
-    $pages = (int)$pages;
-    $pages++;
     for ($i = 0; $i < 18; $i++) {
         require "short-story.php";
     }
