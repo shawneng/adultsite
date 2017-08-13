@@ -1,5 +1,4 @@
 <?php
-    $info_array = mysqli_fetch_assoc($query);
     echo '
     <div class="row1 z-depth-3">
         <a href="/?id=' . $info_array['id'] . '">

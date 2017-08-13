@@ -1,9 +1,8 @@
 <?php
 $sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
-$query = mysqli_query($connect_DB, $sql);
+$query_posts = mysqli_query($connect_DB, $sql);
 $row_num = mysqli_num_rows($query);
-$info_array = mysqli_fetch_assoc($query);
-$pages = $row_num / 10;
+$pages = $row_num / 18;
 $pages = (int)$pages;
 $pages++;
 // Получение видео которые лайкнув пользователь
@@ -34,6 +33,7 @@ if (!$_GET){
     // Вывод видео
     echo '<div class="content">';
     for ($i = 0; $i < 18; $i++) {
+        $info_array = mysqli_fetch_assoc($query_posts);
         require "short-story.php";
     }
     echo '<ul class="pagination">';

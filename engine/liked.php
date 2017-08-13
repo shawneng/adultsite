@@ -1,8 +1,6 @@
 <?php
 for ($i = 0; $i < $count_a; $i++) {
     $id_post = (int)$like_array[$i];
-    $sql = "SELECT * FROM `posts` WHERE `id` = '$id_post'";
-    $query = mysqli_query($connect_DB, $sql);
     $info_array = mysqli_fetch_assoc($query);
     echo '
     <div class="row1 z-depth-3">
