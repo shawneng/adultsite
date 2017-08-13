@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="left-block inline-block">
-            <div id="video">
+            <div id="video" class="z-depth-4">
                 <div class="video">
                     <video src="<?php echo $info_array['video'] ?>" controls
                            poster="<?php echo $info_array['pre'] ?>"></video>
