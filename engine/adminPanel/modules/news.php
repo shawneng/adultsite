@@ -53,7 +53,7 @@ if (isset($_GET['id'])) {
 <body>
 
 <div class="head">
-    <a href="/admin.php"><h1>News</h1></a>
+    <a href="news.php"><h1>News</h1></a>
     <a href="/admin.php" class="adminExit">Admin Panel</a>
     <a class="viewSite inline-block" href="/" target="_blank">Просмотр сайта</a>
 </div>
