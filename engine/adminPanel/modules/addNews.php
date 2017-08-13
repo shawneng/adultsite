@@ -127,9 +127,10 @@ if (isset($_POST['buttonAdd']) && !empty($_POST['title'])) {
             <span>Categories*: </span>
             <?php
 
+            $sql = "SELECT * FROM `categories`";
+            $query = mysqli_query($connect_DB, $sql);
+
             for ($i = 1; $i <= $cat_num[0]; $i++) {
-                $sql = "SELECT * FROM `categories` WHERE `id` = '$i'";
-                $query = mysqli_query($connect_DB, $sql);
                 $infoArray = mysqli_fetch_assoc($query);
 
                 if ($infoArray['id'] != '') {
