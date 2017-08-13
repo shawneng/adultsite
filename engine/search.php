@@ -22,7 +22,7 @@ while($row = mysqli_fetch_array($query)){
 
     if(array_intersect($arraySearch, $arrayNews)){
         echo '
-    <div class="row z-depth-3">
+    <div class="row1 z-depth-3">
         <a href="/?id='. $row['id'] .'">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">

@@ -1,7 +1,7 @@
-<div class="full-story">
-    <div class="videoBlock radius">
+<div class="row">
+    <div class="col s12" id="video">
         <div class="video">
-            <video src="<?php echo $info_array['video']?>" controls poster="<?php echo $info_array['pre']?>"></video>
+            <video src="<?php echo $info_array['video']?>" controls poster="<?php echo $info_array['pre']?>" class="responsive-video"></video>
         </div>
         <div class="rightAD">
 

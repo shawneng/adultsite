@@ -21,13 +21,6 @@ $infoArray = mysqli_fetch_assoc($query);
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><?php echo $infoArray['name_site']; ?></title>
-    <style>
-    <?php
-//    require_once "style.php";
-    if($_GET['id'] > 0) require_once "css/full-story-style.php";
-    else require_once "css/main-style.php";
-    ?>
-    </style>
 </head>
 <body>
 

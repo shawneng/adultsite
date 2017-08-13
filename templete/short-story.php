@@ -24,7 +24,7 @@ for ($i = 0; $i < 18 ; $i++) {
     $query = mysqli_query($connect_DB, $sql);
     $info_array = mysqli_fetch_assoc($query);
     echo '
-    <div class="row z-depth-3">
+    <div class="row1 z-depth-3">
         <a href="/?id='. $id_post .'">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
