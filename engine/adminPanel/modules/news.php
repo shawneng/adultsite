@@ -20,6 +20,17 @@ $news_num = mysqli_fetch_array($query);
 $max = $news_num[0];
 $min = 1;
 
+$rus = array(
+    "й","ц","у","к","е","н","г","ш","щ","з","х","ъ",
+    "ф","ы","в","а","п","р","о","л","д","ж","э",
+    "я","ч","с","м","и","т","ь","б","ю"
+);
+$lat = array(
+    "q","w","e","r","t","y","u","i","o","p","[","]",
+    "a","s","d","f","g","h","j","k","l",";","'",
+    "z","x","c","v","b","n","m",",","."
+);
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '$id'";
@@ -107,11 +118,40 @@ if (isset($_GET['id'])) {
                 }
             }
             if ($n == 0) {
-                echo 'false';
-            }
-        }
 
-        else {
+                $sql = "SELECT * FROM `posts`";
+                $query = mysqli_query($connect_DB, $sql);
+
+                $request = str_replace($lat, $rus, $request);
+                $request = mb_strtolower($request);
+                $arraySearch = explode(" ", $request);
+                echo $request. ' ';
+
+                //print_r($arraySearch);
+
+                while ($infoArray = mysqli_fetch_array($query)) {
+                    $search = $infoArray['title'];
+                    $search = mb_strtolower($search);
+                    $arrayNews = explode(" ", $search);
+
+                    if (array_intersect($arraySearch, $arrayNews)) {
+                        echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                        $n++;
+                    }
+                }
+            }
+            if($n == 0){
+                echo "False";
+            }
+        } else {
             for ($i = $max; $i >= $min; $i--) {
                 $sql = "SELECT * FROM `posts` WHERE `id` = '$i'";
                 $query = mysqli_query($connect_DB, $sql);
