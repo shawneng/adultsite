@@ -30,15 +30,15 @@ while($row = mysqli_fetch_array($query)){
         <span class="card-title">'.$row['title'].'</span>
     </div>
                 <div class="sinfo">
-                    <div class="sviews inline-block"><i class="material-icons">visibility</i><div class="itext inline-block">'.$row['views'].'</div></div>
-                    <div class="stime inline-block"><i class="material-icons">access_time</i><div class="itext inline-block">'.$row['time'].'</div></div>
+                    <div class="sviews inline-block"><i class="tiny material-icons">visibility</i><div class="itext inline-block">'.$row['views'].'</div></div>
+                    <div class="stime inline-block"><i class="tiny material-icons">access_time</i><div class="itext inline-block">'.$row['time'].'</div></div>
                     <div class="inline-block right">';
         if ($_COOKIE['logining'] == 2) {
             if (in_array($row['id'], $like_array)){
-                echo '<a href="/engine/like.php?id='. $row['id']  .'&iduser='. $id .'&like=1"><i class="material-icons">favorite</i></a>';
+                echo '<a href="/engine/like.php?id='. $row['id']  .'&iduser='. $id .'&like=1"><i class="tiny material-icons">favorite</i></a>';
             }
             else{
-                echo '<a href="/engine/like.php?id='. $row['id']  .'&iduser='. $id .'&like=2"><i class="material-icons">favorite_border</i></a>';
+                echo '<a href="/engine/like.php?id='. $row['id']  .'&iduser='. $id .'&like=2"><i class="tiny material-icons">favorite_border</i></a>';
             }
         }
         else {

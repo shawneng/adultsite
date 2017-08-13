@@ -28,19 +28,19 @@ for ($i = 0; $i < $videos ; $i++) {
                 </div>
             </div>
         </a>
-        <div class="card-content">
+        <div class="card-content center">
         <span class="card-title">'.$info_array['title'].'</span>
     </div>
                 <div class="sinfo">
-                    <div class="sviews inline-block"><i class="material-icons">visibility</i><div class="itext inline-block">'.$info_array['views'].'</div></div>
-                    <div class="stime inline-block"><i class="material-icons">access_time</i><div class="itext inline-block">'.$info_array['time'].'</div></div>
+                    <div class="sviews inline-block"><i class="tiny material-icons">visibility</i><div class="itext inline-block">'.$info_array['views'].'</div></div>
+                    <div class="stime inline-block"><i class="tiny material-icons">access_time</i><div class="itext inline-block">'.$info_array['time'].'</div></div>
                     <div class="inline-block right">';
     if ($_COOKIE['logining'] == 2) {
         if (in_array($id_post, $like_array)){
-            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=1"><i class="material-icons">favorite</i></a>';
+            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=1"><i class="tiny material-icons">favorite</i></a>';
         }
         else{
-            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=2"><i class="material-icons">favorite_border</i></a>';
+            echo '<a href="/engine/like.php?id='. $id_post  .'&iduser='. $id .'&like=2"><i class="tiny material-icons">favorite_border</i></a>';
         }
     }
     else {
@@ -68,13 +68,16 @@ else {
     }
     }
 for ($i = 1; $i <= $pages; $i++){
-    if ( $i == $active_page ) {
-        echo '<li class="active"><a href="?page='.$i.'">'.$i.'</a></li>';
-    }
-    else {
-        echo '
+    if ( $i == 1 ) {
+        echo '<li class="waves-effect"><a href="/">'.$i.'</a></li>';
+    }else {
+        if ($i == $active_page) {
+            echo '<li class="active"><a href="?page=' . $i . '">' . $i . '</a></li>';
+        } else {
+            echo '
         <li class="waves-effect"><a href="?page=' . $i . '">' . $i . '</a></li>
         ';
+        }
     }
 }
 if ($active_page == 2) {
@@ -85,4 +88,5 @@ else {
     $pre_page = $active_page+1;
     echo '<li class="waves-effect"><a href="?page='.$pre_page.'"><i class="material-icons">chevron_right</i></a></li>';
 }
+echo '</ul>';
 ?>

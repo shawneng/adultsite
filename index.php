@@ -39,8 +39,5 @@ $row = mysqli_fetch_array($query);
 $checkadmin = $row[0];
 setcookie('userStatus', $checkadmin);
 // Подключение шаблона
-if ($_GET['id'] > 0) require_once "video.php";
-else require_once "templete/main.php";
-////if ($_GET['search'] !== "" ) require_once "engine/search.php";
-//else require_once "templete/main.php";
+require_once "templete/main.php";
 ?>
