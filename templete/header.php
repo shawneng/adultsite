@@ -10,8 +10,8 @@
             <a href="#!name"><span class="white-text name">' . $login . '</span></a>
             <a href="#!email"><span class="white-text email"></span></a>
         </div></li>
-    <li><a href="#!"><i class="material-icons">account_box</i>Мой профиль</a><span class="new badge red">'.$count_a.'</span></li>
-    <li><a href="?liked"><i class="material-icons">favorite</i>Мое любимое</a><span class="new badge blue">'.$numh.'</span></li>
+    <li><a href="#!"><i class="material-icons">account_box</i>Мой профиль</a><span class="badge red">'.$count_a.'</span></li>
+    <li><a href="?liked"><i class="material-icons">favorite</i>Мое любимое</a><span class="badge blue">'.$numh.'</span></li>
     <li><a href="?history"><i class="material-icons">restore</i>История</a></li>
     <li><a href="#!"><i class="material-icons">build</i>Настройки</a></li>
     <li><a href="../engine/exit.php?exit"><i class="material-icons">exit_to_app</i>Выход</a></li>
