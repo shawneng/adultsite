@@ -31,7 +31,7 @@ for ($i = 0; $i < 18; $i++) {
         <a href="/?id=' . $id_post . '">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img src="' . $info_array['pre'] . '" alt="">
+                    <img src="' . $info_array['pre'] . '" alt="'. $info_array['title'] .'">
                 </div>
             </div>
         </a>
@@ -47,10 +47,11 @@ for ($i = 0; $i < 18; $i++) {
             if (in_array($id_post_k, $like_array)) {
                 echo '<a href="/engine/like.php?id=' . $id_post . '&iduser=' . $id . '&like=1"><i class="tiny material-icons">favorite</i></a>';
             } else {
+
                 echo '<a href="/engine/like.php?id=' . $id_post . '&iduser=' . $id . '&like=2"><i class="tiny material-icons">favorite_border</i></a>';
             }
         } elseif ($_COOKIE['logining'] !== 2) {
-            echo '<a href="/"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
+            echo '<a href="/"><img src="../templete/images/un_like.png" alt="like video" class="infopngr"></a>';
         }
 
         echo '<div class="itext inline-block">' . $info_array['likes'] . '</div></div>
