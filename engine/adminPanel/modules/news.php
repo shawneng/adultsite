@@ -21,14 +21,14 @@ $max = $news_num[0];
 $min = 1;
 
 $rus = array(
-    "й","ц","у","к","е","н","г","ш","щ","з","х","ъ",
-    "ф","ы","в","а","п","р","о","л","д","ж","э",
-    "я","ч","с","м","и","т","ь","б","ю"
+    "й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ",
+    "ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э",
+    "я", "ч", "с", "м", "и", "т", "ь", "б", "ю"
 );
 $lat = array(
-    "q","w","e","r","t","y","u","i","o","p","[","]",
-    "a","s","d","f","g","h","j","k","l",";","'",
-    "z","x","c","v","b","n","m",",","."
+    "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]",
+    "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'",
+    "z", "x", "c", "v", "b", "n", "m", ",", "."
 );
 
 if (isset($_GET['id'])) {
@@ -111,6 +111,7 @@ if (isset($_GET['id'])) {
             <span>| Time: ' . $infoArray['time'] . ' |</span>
             <span>| Views: ' . $infoArray['views'] . ' |</span>
             <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
             </a>
             <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
             ';
@@ -135,7 +136,7 @@ if (isset($_GET['id'])) {
 
                     if (array_intersect($arraySearch, $arrayNews)) {
                         $n++;
-                        if($n == 1){
+                        if ($n == 1) {
                             //переведений запрос треба вивести норм, це коли знайдено з переведеним
                             echo $request;
                         }
@@ -145,6 +146,7 @@ if (isset($_GET['id'])) {
             <span>| Time: ' . $infoArray['time'] . ' |</span>
             <span>| Views: ' . $infoArray['views'] . ' |</span>
             <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
             </a>
             <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
             ';
@@ -152,7 +154,7 @@ if (isset($_GET['id'])) {
                     }
                 }
             }
-            if($n == 0){
+            if ($n == 0) {
                 echo "False";
             }
         } else {
@@ -168,6 +170,7 @@ if (isset($_GET['id'])) {
             <span>| Time: ' . $infoArray['time'] . ' |</span>
             <span>| Views: ' . $infoArray['views'] . ' |</span>
             <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
             </a>
             <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
             ';

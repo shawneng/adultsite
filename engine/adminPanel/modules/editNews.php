@@ -23,12 +23,12 @@ $description = $_POST['description'];
 $keywords = $_POST['keywords'];
 $time = $_POST['time'];
 
-if(isset($_POST['buttonSave'])){
+if (isset($_POST['buttonSave'])) {
     $sql = "UPDATE `posts` SET `title` = '$title', `video` = '$videoLink', `descr` = '$description', `time` = '$time', `keywords` = '$keywords' WHERE `id` = '$id'";
     $query = mysqli_query($connect_DB, $sql);
     header("Location: news.php");
 }
-if(isset($_POST['buttonDelete'])){
+if (isset($_POST['buttonDelete'])) {
     $sql = "DELETE FROM `posts` WHERE `posts`.`id` = '$id'";
     $query = mysqli_query($connect_DB, $sql);
     header("location: news.php");
@@ -122,6 +122,14 @@ if(isset($_POST['buttonDelete'])){
 
         <div class="showPreview">
             <span>Preview: </span>
+        </div>
+
+        <div class="showDate">
+            <b><span>Date: </span>
+                <?php
+                echo $infoArray['date'];
+                ?>
+            </b>
         </div>
 
         <div class="finalAdd">
