@@ -27,6 +27,8 @@ $count_a--;
 $history_video_id = explode(', ', $info_user['history']);
 $num_videos = count($history_video_id);
 
+$sql = "SELECT * FROM categories";
+$query_cat = mysqli_query($connect_DB, $sql);
 require_once "head.php";
 require_once "header.php";
 if (!$_GET){
@@ -70,7 +72,7 @@ if(isset($_GET['search'])){
 }
 if ($_COOKIE['userStatus'] == 2) {
     echo '<div class="fixed-action-btn horizontal">
-    <a class="btn-floating btn-large green">
+    <a class="btn-floating btn-large">
       <i class="large material-icons">mode_edit</i>
     </a>
     <ul>
