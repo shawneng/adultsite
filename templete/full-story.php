@@ -15,20 +15,31 @@
 
                 </div>
             </div>
-            <div class="finfo radius">
+            <div class="finfo radius z-depth-4">
                 <div class="ftitle"><h1 class="font-h1"><?php echo $info_array['title'] ?></h1></div>
                 <div class="infol inline-block">
-                    <div class="fviews inline-block"><img src="../templete/images/views.png" alt="" class="infopng">
-                        <div class="itext inline-block"><?php echo $info_array['views'] ?></div>
-                    </div>
-                    <div class="ftime inline-block"><img src="../templete/images/time.png" alt="" class="infopng">
-                        <div class="itext inline-block"><?php echo $info_array['time'] ?></div>
-                    </div>
+                    <div class="f-views"><?php echo $info_array['views'] ?> просмотров</div>
                 </div>
                 <div class="infor inline-block right">
-                    <div class="flikes inline-block"><img src="../templete/images/un_like.png" alt="" class="infopngr">
-                        <div class="itext inline-block"><?php echo $info_array['likes'] ?></div>
+                    <div class="flikes inline-block"><i class="material-icons">favorite_border</i>
+                        <div class="f-itext inline-block"><?php echo $info_array['likes'] ?></div>
+                        <button class="share inline-block waves-effect waves-light btn pink "><i class="material-icons">cloud_download</i><span class="inline-block f-itext">Скачать</span></button>
+                        <button class="share inline-block btn-flat waves-effect waves-light"><i class="material-icons">share</i><span class="inline-block f-itext">Поделиться</span></button>
+                        <button class="share inline-block btn-flat waves-effect waves-light"><i class="material-icons">playlist_add</i></button>
+                        <button class="share inline-block btn-flat waves-effect waves-light"><i class="material-icons">more_horiz</i></button>
                     </div>
+                </div>
+            </div>
+            <div class="finfo radius z-depth-4">
+                <div class="studio inline-block">
+                    <div class="img-studio"><img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A2PA1663PT14X35Y63D1010253415S84C12%3A19/views/1,width=300,height=300,appearanceId=2/brazzers-primary-logo-men-s-premium-t-shirt.jpg" alt="" class="circle"></div>
+                </div>
+                <div class="name-studio inline-block">
+                    <div class="name-s">Brazzers</div>
+                    <div class="date-o">14 июля 2017</div>
+                </div>
+                <div class="follow inline-block right">
+                    <button class="share inline-block waves-effect waves-light btn pink "><span class="inline-block f-itext">Подписаться</span></button>
                 </div>
             </div>
         </div>

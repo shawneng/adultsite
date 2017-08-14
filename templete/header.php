@@ -77,7 +77,7 @@
                 ';
                 } else {
                     echo '<li><a href="#"><i class="material-icons right">notifications</i></a></li>
-                      <li><a href="#"><i class="material-icons right">dehaze</i></a></li>
+                      <li><a href="#"><i class="material-icons right">apps</i></a></li>
             ';
                 }
                 ?>
