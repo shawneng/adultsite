@@ -1,39 +1,39 @@
 <?php
-$sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
+// Отримуєм повну таблицю відосів і записуєм в двохмєрний массив
+$sql = "SELECT * FROM `posts`";
 $query_posts = mysqli_query($connect_DB, $sql);
-$row_num = mysqli_num_rows($query);
+$row_num = mysqli_num_rows($query_posts);
+for ($g = 1; $g <= $row_num; $g++) {
+    $posts[$g] = mysqli_fetch_assoc($query_posts);
+}
+
+// Отримуємо кількість сторінок
 $pages = $row_num / 18;
 $pages = (int)$pages;
 $pages++;
-// Получение видео которые лайкнув пользователь
-$sql = "SELECT likes_video FROM users WHERE id = '$id'";
-$query = mysqli_query($connect_DB, $sql);
-$likes_array = mysqli_fetch_array($query);
-$likes = $likes_array[0];
-$like_array = explode(', ', $likes);
-$k_empty = array_search(' ', $like_array);
-unset($like_array[$k_empty]);
+
+// Отримуємо всі дані про юзера
+$sql = "SELECT * FROM users WHERE id = '$id'";
+$query_liked = mysqli_query($connect_DB, $sql);
+$info_user = mysqli_fetch_assoc($query_liked);
+
+// Отримуєм відоси які лайкнув юзер
+$likes_array = $info_user['likes_video'];
+$like_array = explode(', ', $likes_array);
 $count_a = count($like_array);
-// Получение
-$sql = "SELECT `history` FROM `users` WHERE id = '$id'";
-$query = mysqli_query($connect_DB, $sql);
-$history_video_a = mysqli_fetch_array($query);
-$history_video_id = explode(', ', $history_video_a[0]);
+$count_a--;
 
+// Отримуєм історію переглядів
+$history_video_id = explode(', ', $info_user['history']);
 $num_videos = count($history_video_id);
-$num_videos = $num_videos-1;
-$numh = $num_videos;
 
-$sql = "SELECT max(id) as id FROM `categories`";
-$query = mysqli_query($connect_DB, $sql);
-$num_cat = mysqli_fetch_array($query);
 require_once "head.php";
 require_once "header.php";
 if (!$_GET){
     // Вывод видео
     echo '<div class="content">';
-    for ($i = 0; $i < 18; $i++) {
-        $info_array = mysqli_fetch_assoc($query_posts);
+    for ($i = $row_num; $i > $row_num - 18; $i--) {
+        $info_array = $posts[$i];
         require "short-story.php";
     }
     echo '<ul class="pagination">';
@@ -59,6 +59,7 @@ if(isset($_GET['categorie'])) {
     require_once "engine/category.php";
 }
 if(isset($_GET['liked'])) {
+
     require_once "engine/liked.php";
 }
 if(isset($_GET['page'])) {
