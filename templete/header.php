@@ -6,7 +6,7 @@
                 <div class="cat-img"><img
                             src="https://i.pinimg.com/736x/61/2a/cc/612acc490a0a732e58874dbe181fa9b2--super-star-sexy-body.jpg"
                             alt=""></div>
-                <div class="cat-title center">Анал</div>
+                <div class="cat-title center">Riley Reid</div>
             </div>
         </a>
     </div>
@@ -36,8 +36,8 @@
             <a href="#!name"><span class="white-text name">' . $login . '</span></a>
             <a href="#!email"><span class="white-text email"></span></a>
         </div></li>
-    <li><a href="#!"><i class="material-icons">account_box</i>Мой профиль</a><span class="badge red">' . $count_a . '</span></li>
-    <li><a href="?liked"><i class="material-icons">favorite</i>Мое любимое</a><span class="badge blue">' . $num_videos . '</span></li>
+    <li><a href="#!"><i class="material-icons">account_box</i>Мой профиль</a><span class="badge pink">' . $count_a . '</span></li>
+    <li><a href="?liked"><i class="material-icons">favorite</i>Мое любимое</a><span class="badge pink">' . $num_videos . '</span></li>
     <li><a href="?history"><i class="material-icons">restore</i>История</a></li>
     <li><a href="#!"><i class="material-icons">build</i>Настройки</a></li>
     <li><a href="../engine/exit.php?exit"><i class="material-icons">exit_to_app</i>Выход</a></li>
@@ -62,8 +62,8 @@
             <ul class="hide-on-med-and-down">
                 <li>
                     <form action="" class="s-form inline-block">
-                        <input type="search" class="search" placeholder="Введите запрос" name="search">
-                        <a class="waves-effect waves-light btn btn-s"><i class="material-icons i-s">search</i></a>
+                        <input id="search" type="search" class="search" placeholder="Введите запрос" name="search">
+                        <label for="search"><button class="waves-effect waves-light btn btn-s pink "><i class="material-icons i-s">search</i></button></label>
                     </form>
                 </li>
             </ul>

@@ -34,7 +34,7 @@ require_once "header.php";
 if (!$_GET){
     // Вывод видео
     echo '<div class="content">';
-    for ($i = $row_num; $i > $row_num - 18; $i--) {
+    for ($i = $row_num; $i > $row_num - 20; $i--) {
         $info_array = $posts[$i];
         require "short-story.php";
     }
@@ -73,7 +73,7 @@ if(isset($_GET['search'])){
 if ($_COOKIE['userStatus'] == 2) {
     echo '<div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large">
-      <i class="large material-icons">mode_edit</i>
+      <i class="large material-icons pink">mode_edit</i>
     </a>
     <ul>
       <li><a class="btn-floating red" href="../admin.php"><i class="material-icons">insert_chart</i></a></li>
