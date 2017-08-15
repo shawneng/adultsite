@@ -9,7 +9,7 @@ body {background-color: #292929;}
 .ver-center { position: relative; top: -5px;}
 .avatar {width: 34px; top: 6px; position: relative; right: 10px; border: 2px solid #fff;}
 .sort{margin: 10px;}
-.sortPanel{background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
+.sortPanel{width: 99%;background: #212121; display: inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
 .sortPanel a {color: #fff;}
 .row1 {width: 278px; background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
 .row1 a {color: #fff;}
