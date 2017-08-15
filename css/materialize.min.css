@@ -8,6 +8,9 @@ body {background-color: #292929;}
 .finfo {margin-top: 10px; background: #1a1a1a;  color: #fff; padding: 10px 10px 15px 10px;}
 .ver-center { position: relative; top: -5px;}
 .avatar {width: 34px; top: 6px; position: relative; right: 10px; border: 2px solid #fff;}
+.sort{margin: 10px;}
+.sortPanel{background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
+.sortPanel a {color: #fff;}
 .row1 {width: 278px; background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
 .row1 a {color: #fff;}
 .card-content {height: 50px;}

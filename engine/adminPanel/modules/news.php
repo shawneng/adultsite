@@ -82,11 +82,51 @@ if (isset($_GET['id'])) {
                 </label>
             </form>
         </div>
+
+
+        <div>
+
+            <form >
+                <label>
+                    <select name="sort" onchange="top.location.href =
+                     this.options[this.selectedIndex].value;">
+                        <option selected value="#">Sort by id</option>
+                        <option value="?sort=idAsc">1-10</option>
+                        <option value="?sort=idDesc">10-1</option>
+                    </select>
+                </label>
+
+                <label>
+                    <select name="sort" onchange="top.location.href =
+                     this.options[this.selectedIndex].value;">
+                        <option selected value="#">Sort by title</option>
+                        <option value="?sort=titleAsc">A-z</option>
+                        <option value="?sort=titleDesc">Z-a</option>
+                    </select>
+                </label>
+
+                <label>
+                    <select name="sort" onchange="top.location.href =
+                     this.options[this.selectedIndex].value;">
+                        <option selected value="#">Sort by date</option>
+                        <option value="?sort=dateAsc">1-10</option>
+                        <option value="?sort=dateDesc">10-1</option>
+                    </select>
+                </label>
+
+            </form>
+
+        </div>
+
     </div>
     <div>
         <?php
 
+        $sort = $_GET['sort'];
+
         if (isset($_GET['request']) && $_GET['request'] != '') {
+
+            $sort = '';
 
             $sql = "SELECT * FROM `posts`";
             $query = mysqli_query($connect_DB, $sql);
@@ -120,14 +160,14 @@ if (isset($_GET['id'])) {
             }
             if ($n == 0) {
 
+                $sort = '';
+
                 $sql = "SELECT * FROM `posts`";
                 $query = mysqli_query($connect_DB, $sql);
 
                 $request = str_replace($lat, $rus, $request);
                 $request = mb_strtolower($request);
                 $arraySearch = explode(" ", $request);
-
-                //print_r($arraySearch);
 
                 while ($infoArray = mysqli_fetch_array($query)) {
                     $search = $infoArray['title'];
@@ -155,12 +195,132 @@ if (isset($_GET['id'])) {
                 }
             }
             if ($n == 0) {
+                $sort = '';
                 echo "False";
             }
-        } else {
+
+            echo '<br>';
+
+        }
+
+        if ($sort == 'idAsc') {
+
+            $sql = "SELECT * FROM `posts`";
+            $query = mysqli_query($connect_DB, $sql);
+
             for ($i = $max; $i >= $min; $i--) {
-                $sql = "SELECT * FROM `posts` WHERE `id` = '$i'";
-                $query = mysqli_query($connect_DB, $sql);
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+        }
+
+        if ($sort == 'titleAsc') {
+
+            $sql = "SELECT * FROM `posts` ORDER BY `posts`.`title` ASC";
+            $query = mysqli_query($connect_DB, $sql);
+
+            for ($i = $max; $i >= $min; $i--) {
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+        }
+        if ($sort == 'titleDesc') {
+
+            $sql = "SELECT * FROM `posts` ORDER BY `posts`.`title` DESC";
+            $query = mysqli_query($connect_DB, $sql);
+
+            for ($i = $max; $i >= $min; $i--) {
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+        }
+
+        if ($sort == 'dateAsc') {
+
+            $sql = "SELECT * FROM `posts` ORDER BY `posts`.`date` ASC";
+            $query = mysqli_query($connect_DB, $sql);
+
+            for ($i = $max; $i >= $min; $i--) {
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+        }
+
+        if ($sort == 'dateDesc') {
+
+            $sql = "SELECT * FROM `posts` ORDER BY `posts`.`date` DESC";
+            $query = mysqli_query($connect_DB, $sql);
+
+            for ($i = $max; $i >= $min; $i--) {
+                $infoArray = mysqli_fetch_assoc($query);
+
+                if ($infoArray['id'] != '') {
+                    echo '<a href="editNews.php?id=' . $infoArray['id'] . '" class = "showNews">
+            <span><b>| ID: ' . $infoArray['id'] . ' |</b></span>
+            <span>| Title: ' . $infoArray['title'] . ' |</span>
+            <span>| Time: ' . $infoArray['time'] . ' |</span>
+            <span>| Views: ' . $infoArray['views'] . ' |</span>
+            <span>| Likes: ' . $infoArray['likes'] . ' |</span>
+            <span>| Date: ' . $infoArray['date'] . ' |</span>
+            </a>
+            <a href="?id=' . $infoArray['id'] . '" class="btDeleteN"><b>Delete</b></a>
+            ';
+                }
+            }
+
+        } else {
+            $sql = "SELECT * FROM `posts` ORDER BY `posts`.`id` DESC";
+            $query = mysqli_query($connect_DB, $sql);
+
+            for ($i = $max; $i >= $min; $i--) {
                 $infoArray = mysqli_fetch_assoc($query);
 
                 if ($infoArray['id'] != '') {

@@ -87,6 +87,15 @@ if(isset($_GET['page'])) {
 if(isset($_GET['search'])){
     require_once "engine/search.php";
 }
+
+
+//Сортировки
+if(isset($_GET['sort'])) {
+    require_once "sorts.php";
+}
+
+//*
+
 if ($_COOKIE['userStatus'] == 2) {
     echo '<div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large">
