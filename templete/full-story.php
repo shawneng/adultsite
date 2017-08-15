@@ -36,10 +36,22 @@
                 </div>
                 <div class="name-studio inline-block">
                     <div class="name-s">Brazzers</div>
-                    <div class="date-o">14 июля 2017</div>
+                    <div class="date-o">Опубликовано: 14 июля 2017</div>
                 </div>
                 <div class="follow inline-block right">
-                    <button class="share inline-block waves-effect waves-light btn pink "><span class="inline-block f-itext">Подписаться</span></button>
+                    <button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink"><span class="inline-block following">Подписаться</span><span class="count-follow"> 1.1 МЛН</span></button>
+                </div>
+                <div class="descr-video">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><div class="more">Ещё</div><div class="pre-descr">Страстный минет и глубокий анальный секс замечательной, сексуальной, грудастой детки. Парень решил поиграться со своей девушкой шлюхой в ролевые игры как будто они брат с сестрой и трахаются пока родителей нет дома и снять домашнее топ порно на будущие...</div>
+                            </div>
+                            <div class="collapsible-body">Красивая молоденькая девушка была не против такого действия и быстро согласилась на жестокий, анальный, но интересный секс и трах с игрушками, самотыками, резиновыми членами. Она делает минуть и сосёт, а парень - куни и кунилингус в попу. Парень оператор - друг хахаля, не против поснимать порнуху первый раз для товарища.
+                            <div class="f-cat">Категории: Анал, БДСМ</div>
+                                <div>Теги: большая попа, минет</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
