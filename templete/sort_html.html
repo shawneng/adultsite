@@ -1,10 +1,10 @@
 <div class="sortPanel z-depth-3">
-    <span> Videos: </span>
+    <span class="textVideo"> Videos: </span>
 
     <div class="sort inline-block">
         <ul id="dropdown2" class="dropdown-content">
             <li><a href="?sort=durAds">Long</a></li>
-            <li><a href="?sort=durDecs">Short</a></li>
+            <li><a href="?sort=durDesc">Short</a></li>
         </ul>
         <a class="btn dropdown-button" href="#!" data-activates="dropdown2">By duration<i class="material-icons right">arrow_drop_down</i></a>
 
@@ -30,4 +30,12 @@
         <a class="btn dropdown-button" href="#!" data-activates="drop3">Order<i class="material-icons right">arrow_drop_down</i></a>
     </div>
 
+    <div class="sort inline-block">
+        <form action="?sort=hd">
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                <label for="filled-in-box">High-definition only</label>
+            </p>
+        </form>
+    </div>
 </div>

@@ -11,6 +11,8 @@ body {background-color: #292929;}
 .sort{margin: 10px;}
 .sortPanel{width: 99%;background: #212121; display: inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
 .sortPanel a {color: #fff;}
+.chipPanel{inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
+.textVideo{margin: 0 10px 0 20px;}
 .row1 {width: 278px; background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
 .row1 a {color: #fff;}
 .card-content {height: 50px;}
