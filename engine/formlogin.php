@@ -25,7 +25,7 @@ else {
             $sql = "SELECT `id` FROM `users` WHERE `login` = '$loginDB'";
             $query = mysqli_query($connect_DB, $sql);
             $arrayDB = mysqli_fetch_array($query);
-            $_SESSION['id'] = $arrayDB[0];
+            setcookie('id', $arrayDB[0], time()+60*60*24,  '/', 'adultsite');
         } else {
             setcookie('logining', '1', time()+60*60*24,  '/', 'adultsite');
         }
