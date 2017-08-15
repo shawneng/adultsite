@@ -1,5 +1,6 @@
 <?php
 $n = 0;
+
 $request = $_GET['search'];
 $request = mb_strtolower($request);
 

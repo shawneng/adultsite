@@ -1,22 +1,33 @@
 <div class="sortPanel z-depth-3">
-    <span>Video: </span>
+    <span> Videos: </span>
 
     <div class="sort inline-block">
         <ul id="dropdown2" class="dropdown-content">
-            <li><a href="#!">1-10</a></li>
-            <li><a href="?sort=dateAds">10-1</a></li>
+            <li><a href="?sort=durAds">Long</a></li>
+            <li><a href="?sort=durDecs">Short</a></li>
         </ul>
-        <a class="btn dropdown-button" href="#!" data-activates="dropdown2">By Date<i class="material-icons right">arrow_drop_down</i></a>
+        <a class="btn dropdown-button" href="#!" data-activates="dropdown2">By duration<i class="material-icons right">arrow_drop_down</i></a>
 
     </div>
 
     <div class="sort inline-block">
         <ul id="drop1" class="dropdown-content">
-            <li><a href="?sort=titleAsc">A-Z</a></li>
-            <li><a href="?sort=titleDesc">Z-A</a></li>
+            <li><a href="?sort=titleAsc">Last 24 hours<span class="new badge">1</span></a></li>
+            <li><a href="?sort=titleDesc">Last 3 days</a></li>
+            <li><a href="?sort=titleDesc">Last week</a></li>
+            <li><a href="?sort=titleDesc">Last month</a></li>
+            <li><a href="?sort=titleDesc">Last year</a></li>
         </ul>
-        <a class="btn dropdown-button" href="#!" data-activates="drop1">By title<i class="material-icons right">arrow_drop_down</i></a>
+        <a class="btn dropdown-button" href="#!" data-activates="drop1">By time<i class="material-icons right">arrow_drop_down</i></a>
+    </div>
 
+    <div class="sort inline-block">
+        <ul id="drop3" class="dropdown-content">
+            <li><a href="?sort=titleAsc">By relevance</a></li>
+            <li><a href="?sort=titleDesc">By date</a></li>
+            <li><a href="?sort=titleDesc">By duration</a></li>
+        </ul>
+        <a class="btn dropdown-button" href="#!" data-activates="drop3">Order<i class="material-icons right">arrow_drop_down</i></a>
     </div>
 
 </div>
