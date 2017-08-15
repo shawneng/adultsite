@@ -62,10 +62,43 @@ if ($_COOKIE['logining'] == 1) {
     setcookie('attemp', '');
 }
 
+// Сторінки
+if (isset($_GET['page'])) {
+    $active_page = (int)$_GET['page'];
+    $active_page = $active_page * 10;
+    $max_count_posts = $row_num - $active_page;
+    $end_post = 0;
+}
+else {
+    $max_count_posts = $row_num;
+    $end_post = $row_num - 20;
+}
+function page($all_video, $active_page){
+    if ($all_video > 20){
+        $pages = $all_video / 20;
+        $pages = (int)$pages;
+        $pages++;
+        echo '<ul class="pagination">';
+        for ($i = 1; $i <= $pages; $i++){
+            if ( $i == 1 ) {
+                echo '<li class="waves-effect"><a href="/">'.$i.'</a></li>';
+            }else {
+                if ($i == $active_page) {
+                    echo '<li class="active"><a href="?page=' . $i . '">' . $i . '</a></li>';
+                } else {
+                    echo '
+        <li class="waves-effect"><a href="?page=' . $i . '">' . $i . '</a></li>
+        ';
+                }
+            }
+        }
+    }
+}
+
 // Підключення шаблона і обробка запросів
 require_once "templete/head.php";
 require_once "templete/header.php";
-if (!$_GET){
+if (!$_GET || isset($_GET['page'])){
     require_once "templete/main.php";
 }
 if ($_GET['id']) {
@@ -81,9 +114,9 @@ if(isset($_GET['liked'])) {
 
     require_once "engine/liked.php";
 }
-if(isset($_GET['page'])) {
-    require_once "page.php";
-}
+//if(isset($_GET['page'])) {
+//    require_once "page.php";
+//}
 if(isset($_GET['search'])){
     require_once "engine/search.php";
 }
