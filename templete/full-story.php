@@ -1,3 +1,6 @@
+<?php
+$studios_array = explode(', ', $studios);
+?>
 <div id="result"></div>
 <div class="full-story">
     <div class="c-video">
@@ -40,7 +43,14 @@
                     <div class="date-o">Опубликовано: 14 июля 2017</div>
                 </div>
                 <div class="follow inline-block right">
-                    <button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink" id="f-btn"><a href="#" class="inline-block following" id="follow">Подписаться</a><span class="count-follow"> 1.1 МЛН</span></button>
+                    <?php
+                    if (!in_array($_GET['id'], $studios_array)){
+                        echo '<button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink" id="f-btn"><a class="inline-block following" id="follow">Подписаться</a><span id="c-follows" class="count-follow"> 1.1 МЛН</span></button>';
+                    }
+                    else {
+                        echo '<button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn f-btn" id="f-btn"><a class="inline-block following f-color" id="follow">Подписка оформленна</a><span id="c-follows" class="count-follow f-color"> 1.1 МЛН</span></button>';
+                    }
+                    ?>
                 </div>
                 <div class="descr-video">
                     <ul class="collapsible" data-collapsible="accordion">

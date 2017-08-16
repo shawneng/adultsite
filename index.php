@@ -31,6 +31,7 @@ $info_user = mysqli_fetch_assoc($query_liked);
 // Отримуємо основні дані про юзера
 $login = $info_user['login'];
 $avatar = $info_user['avatar'];
+$studios = $info_user['studios'];
 $checkadmin = $info_user['status_user'];
 setcookie('userStatus', $checkadmin);
 if ($avatar == "") {

@@ -25,7 +25,8 @@
 </footer>
 <!--Import jQuery before materialize.js-->
 <script>
-    var idUser = <?php echo $id ?>
+    var idUser = <?php echo $id ?>;
+    var idPost = <?php echo $_GET['id'] ?>;
 </script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="../templete/js/display.js"></script>

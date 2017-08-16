@@ -12,11 +12,12 @@ $( document ).ready(function() {
             $.ajax({ //отправляем ajax-запрос
                 type: "POST", //тип (POST, GET, PUT, etc)
                 url: "/ajax.php", //УРЛ Вашего обработчика
-                data: { idUser: idUser, idStudio: "13" } //сами данные, передается POST[xmlUrl] со значением из data-link нажатой кнопки
+                data: { idUser: idUser, idStudio: idPost } //сами данные, передается POST[xmlUrl] со значением из data-link нажатой кнопки
             })
                 .done(function( res ) { //при успехе (200 статус)
                     $('#f-btn').removeClass('pink').addClass('f-btn'); //заменяем блок с id="result" полученной строкой от сервера.
-                    $('#follow').html(res)
+                    $('#follow').html(res).addClass('f-color');
+                    $('#c-follows').addClass('f-color')
                 });
         }
     );
