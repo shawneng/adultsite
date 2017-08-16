@@ -62,7 +62,7 @@
             <ul class="hide-on-med-and-down">
                 <li>
                     <form action="" class="s-form inline-block">
-                        <input id="search" type="search" class="search" placeholder="Введите запрос" name="search">
+                        <input id="search" type="search" class="search" placeholder="Введите запрос" name="search" value="<?php echo $_GET['search']; ?>">
                         <label for="search"><button class="waves-effect waves-light btn btn-s pink "><i class="material-icons i-s">search</i></button></label>
                     </form>
                 </li>

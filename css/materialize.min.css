@@ -12,6 +12,8 @@ body {background-color: #292929;}
 .sortPanel{width: 99%;background: #212121; display: inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
 .sortPanel a {color: #fff;}
 .chipPanel{inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
+.searchText{width: 99%; height: 30px; line-height: 30px; background: #212121; display: inline-block; color: #fff; margin-right: 20px!important; margin-bottom: 15px;}
+.sText{margin-left: 10px;}
 .textVideo{margin: 0 10px 0 20px;}
 .row1 {width: 278px; background: #212121; display: inline-block; color: #fff; margin-right: 10px!important; margin-bottom: 15px;}
 .row1 a {color: #fff;}
