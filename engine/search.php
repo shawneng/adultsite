@@ -41,24 +41,24 @@
 
             if (array_intersect($arraySearch, $arrayNews)) {
                 $n++;
-                if ($n == 1) {
-                    echo '<div class="content">
-                                <div class="searchText z-depth-3">
-                                    <div class="sText">По запросу 
-                                             <b><i><ins>' . $_GET['search'] . ' </ins></i></b> ничего не найдено</div>
-                                         
-                    <div class="sText">
-                            Показаны видео по запросу <b><i><ins>' . $request . ' </ins></i></b></div>
-                            
-                           
-                           </div>
-                           </div>';
-                    //echo $request;
-                }
-                require "templete/short-story.php";
+                if ($n == 1){
 
+                    echo '
+                    
+                    <div class="content">
+                        <div class="searchText searchText z-depth-3">
+                            <div class="sText">По запросу 
+                            <b><i><ins>' . $_GET['search'] . ' </ins></i></b> ничего не найдено</div>
+                            <div class="sText">Показаны видео по запросу
+                            <b><i><ins>' . $request . ' </ins></i></b></div>
+</div>
+</div>                    
+                    ';
             }
+            require "templete/short-story.php";
+
         }
+    }
     }
     if ($n == 0) {
         //треба вивести норм тож коли тупо нічого не знайдено
