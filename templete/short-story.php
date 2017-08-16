@@ -4,7 +4,7 @@
         <a href="/?id=' . $info_array['id'] . '">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img src="' . $info_array['pre'] . '" alt="">
+                    <img src="' . $info_array['pre'] . '" alt="'.$info_array['title'] .'">
                 </div>
             </div>
         </a>
