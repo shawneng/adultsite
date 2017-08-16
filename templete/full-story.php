@@ -1,3 +1,4 @@
+<div id="result"></div>
 <div class="full-story">
     <div class="c-video">
         <div class="right-block inline-block right">
@@ -39,7 +40,7 @@
                     <div class="date-o">Опубликовано: 14 июля 2017</div>
                 </div>
                 <div class="follow inline-block right">
-                    <button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink"><span class="inline-block following">Подписаться</span><span class="count-follow"> 1.1 МЛН</span></button>
+                    <button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink" id="f-btn"><a href="#" class="inline-block following" id="follow">Подписаться</a><span class="count-follow"> 1.1 МЛН</span></button>
                 </div>
                 <div class="descr-video">
                     <ul class="collapsible" data-collapsible="accordion">

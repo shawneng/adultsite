@@ -24,7 +24,9 @@
     </div>
 </footer>
 <!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    var idUser = <?php echo $id ?>
+</script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="../templete/js/display.js"></script>
 <?php require_once "javascript.php"?>
