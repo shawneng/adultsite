@@ -6,6 +6,6 @@ for ($i = $max_count_posts; $i > $end_post; $i--) {
     $info_array = $posts[$i];
     require "short-story.php";
 }
-page($row_num, $_GET['page']);
+page($row_num, $count_posts_wall);
 
 ?>

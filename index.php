@@ -7,6 +7,9 @@ require_once 'engine/db_config.php';
 $connect_DB = mysqli_connect($hostDB, $userDB, $passwordDB, $nameDB) or die("Ошибка" . mysqli_error($connect_DB));
 
 $id = $_COOKIE['id'];
+$count_posts_wall = 10;
+$pre_url_array = explode("?", $_SERVER['HTTP_REFERER']);
+$pre_url = $pre_url_array[1];
 
 // Отримуєм повну таблицю відосів і записуєм в двохмєрний массив
 $sql = "SELECT * FROM `posts`";
@@ -40,6 +43,7 @@ if ($avatar == "") {
 $likes_array = $info_user['likes_video'];
 $like_array = explode(', ', $likes_array);
 $count_a = count($like_array);
+$max_posts_liked = $count_a;
 $count_a--;
 
 // Отримуєм історію переглядів
@@ -61,34 +65,53 @@ if ($_COOKIE['logining'] == 1) {
 } else {
     setcookie('attemp', '');
 }
-
 // Сторінки
 if (isset($_GET['page'])) {
     $active_page = (int)$_GET['page'];
-    $active_page = $active_page * 10;
+    $active_page--;
+    $active_page = $active_page * $count_posts_wall;
     $max_count_posts = $row_num - $active_page;
-    $end_post = 0;
+    $end_post = $max_count_posts - $count_posts_wall;
 }
 else {
     $max_count_posts = $row_num;
-    $end_post = $row_num - 20;
+    $end_post = $row_num - $count_posts_wall;
 }
-function page($all_video, $active_page){
-    if ($all_video > 20){
-        $pages = $all_video / 20;
+function page($all_video, $count_posts_wall){
+    if ($all_video > $count_posts_wall){
+        $pages = $all_video / $count_posts_wall;
         $pages = (int)$pages;
         $pages++;
-        echo '<ul class="pagination">';
-        for ($i = 1; $i <= $pages; $i++){
-            if ( $i == 1 ) {
-                echo '<li class="waves-effect"><a href="/">'.$i.'</a></li>';
-            }else {
-                if ($i == $active_page) {
-                    echo '<li class="active"><a href="?page=' . $i . '">' . $i . '</a></li>';
+        if ($pre_url = " ") {
+            echo '<ul class="pagination">';
+            for ($i = 1; $i <= $pages; $i++) {
+                if ($i == 1) {
+                    echo '<li class="waves-effect"><a href="/">' . $i . '</a></li>';
                 } else {
-                    echo '
+                    if ($i == $active_page) {
+                        echo '<li class="active"><a href="?page=' . $i . '">' . $i . '</a></li>';
+                    } else {
+                        echo '
         <li class="waves-effect"><a href="?page=' . $i . '">' . $i . '</a></li>
         ';
+                    }
+                }
+            }
+        }
+        else {
+            echo '<ul class="pagination">';
+            echo $pre_url;
+            for ($i = 1; $i <= $pages; $i++) {
+                if ($i == 1) {
+                    echo '<li class="waves-effect"><a href="/">' . $i . '</a></li>';
+                } else {
+                    if ($i == $active_page) {
+                        echo '<li class="active"><a href="?=' . $i . '">' . $i . '</a></li>';
+                    } else {
+                        echo '
+        <li class="waves-effect"><a href="?=' . $i . '">' . $i . '</a></li>
+        ';
+                    }
                 }
             }
         }
