@@ -1,12 +1,26 @@
 <?php
 $studios_array = explode(', ', $studios);
+$arraySearch = explode(" ", $info_array['title']);
 ?>
 <div id="result"></div>
 <div class="full-story">
     <div class="c-video">
         <div class="right-block inline-block right">
             <div class="poh">
+                <div class="recom">Рекомендованные</div>
+                <?php
+                for ($i = $row_num; $i > $row_num - 18; $i--) {
+                    $info_array = $posts[$i];
+                    $search = $info_array['title'];
+                    $search = mb_strtolower($search);
+                    $arrayNews = explode(" ", $search);
 
+                    if (array_intersect($arraySearch, $arrayNews)) {
+                        require "short-story.php";
+                        $n++;
+                    }
+                }
+                ?>
             </div>
         </div>
         <div class="left-block inline-block">
@@ -44,7 +58,8 @@ $studios_array = explode(', ', $studios);
                 </div>
                 <div class="follow inline-block right">
                     <?php
-                    if (!in_array($_GET['id'], $studios_array)){
+                    $idUsers_array = explode(', ', $info_studio['idUsers']);
+                    if (!in_array($id, $idUsers_array)){
                         echo '<button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink" id="f-btn"><a class="inline-block following" id="follow">Подписаться</a><span id="c-follows" class="count-follow"> 1.1 МЛН</span></button>';
                     }
                     else {

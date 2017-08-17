@@ -23,5 +23,6 @@ else {
     $new_studios = implode(', ', $is_studio_array);
     $sql = "UPDATE `users` SET `studios` = '$new_studios' WHERE `users`.`id` = $id";
     $query = mysqli_query($connect_DB, $sql);
+    echo 'Подписаться';
 }
 ?>

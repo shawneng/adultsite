@@ -42,9 +42,20 @@
     <li><a href="#!"><i class="material-icons">build</i>Настройки</a></li>
     <li><a href="../engine/exit.php?exit"><i class="material-icons">exit_to_app</i>Выход</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Студії</a></li>
-    <li><a class="waves-effect " href="#!"><img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A2PA1663PT14X35Y63D1010253415S84C12%3A19/views/1,width=300,height=300,appearanceId=2/brazzers-primary-logo-men-s-premium-t-shirt.jpg" alt="" class="circle avatar"><span class="ver-center">Brazzers</span></a></li>
-    ';
+    <li><a class="subheader">Студії</a></li>';
+    for ($i = 1; $i <= $int_studios; $i++) {
+        if (in_array($i, $studios_f_user)) {
+            $infoStudio = $studios_array[$i];
+            echo '
+                <li>
+                    <a class="waves-effect " href = "#!" >
+                        <img src = "https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A2PA1663PT14X35Y63D1010253415S84C12%3A19/views/1,width=300,height=300,appearanceId=2/brazzers-primary-logo-men-s-premium-t-shirt.jpg" alt = "" class="circle avatar" >
+                        <span class="ver-center" > '.$infoStudio['name'].'</span >
+                    </a >
+                   </li>
+                    ';
+        }
+    }
     ?>
 </ul>
 <!-- Dropdown Structure -->

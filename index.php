@@ -51,8 +51,16 @@ $count_a--;
 $history_video_id = explode(', ', $info_user['history']);
 $num_videos = count($history_video_id);
 
-$sql = "SELECT * FROM categories";
-$query_cat = mysqli_query($connect_DB, $sql);
+$sql = "SELECT * FROM studios";
+$query_studio = mysqli_query($connect_DB, $sql);
+$row_studio = mysqli_num_rows($query_studio);
+for ($i = 1; $i <= $row_studio; $i++) {
+    $studios_array[$i] = mysqli_fetch_assoc($query_studio);
+}
+$info_studio = $studios_array[1];
+$studios_f_user = explode(", ", $info_user['studios']);
+$int_studios = count($studios_f_user);
+$int_studios--;
 
 // Вывод сообщения "Забыли пароль?"
 if ($_COOKIE['logining'] == 1) {
