@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 17 2017 г., 18:57
+-- Время создания: Авг 17 2017 г., 23:28
 -- Версия сервера: 5.5.53
 -- Версия PHP: 7.1.0
 
@@ -62,36 +62,37 @@ CREATE TABLE `posts` (
   `likes` int(11) NOT NULL,
   `video` varchar(50) NOT NULL,
   `keywords` text NOT NULL,
-  `categories` varchar(50) NOT NULL
+  `categories` varchar(50) NOT NULL,
+  `studio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`, `categories`) VALUES
-(1, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 771, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(2, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12530, 610, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(3, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 49, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(4, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 49, 57, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(5, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12531, 611, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(6, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 772, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(7, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 48, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(8, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 772, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(9, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12529, 614, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(10, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15456, 773, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(11, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12533, 609, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(12, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12535, 616, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(13, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 4, 773, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(14, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 56, 56, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(15, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 57, 60, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(16, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 56, 46, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(17, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 58, 58, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(18, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12532, 619, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3'),
-(19, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 12532, 781, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2'),
-(20, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 12532, 58, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3'),
-(21, 'Засадил здоровенный член между упругих булочек', 'http://img.mega-porno.me/video/42/2/41114/2.jpg', '', '18:01', 12532, 47, 'http://cdn1.vids69.com/video/42/2/41114/41114.mp4', '', '1, 3'),
-(22, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 12532, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3');
+INSERT INTO `posts` (`id`, `title`, `pre`, `descr`, `time`, `views`, `likes`, `video`, `keywords`, `categories`, `studio`) VALUES
+(1, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 771, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(2, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12530, 610, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(3, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 49, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(4, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 49, 57, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(5, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12531, 611, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(6, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 772, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(7, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 48, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(8, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15455, 772, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(9, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12529, 614, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(10, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 15456, 773, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(11, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12533, 609, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(12, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12535, 616, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(13, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 4, 773, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(14, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 56, 56, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(15, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 57, 60, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(16, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 56, 46, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(17, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 12532, 58, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(18, 'Дед выебал внучку и кончил ей на лицо', 'http://adultsite/uploads/post_images/pre2.jpg', '', '43:12', 12532, 619, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2, 3', 0),
+(19, 'Парень ебет девушку и кончает внутрь', 'http://adultsite/uploads/post_images/pre.jpg', '', '15:35', 12532, 781, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 2', 0),
+(20, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 12535, 58, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 0),
+(21, 'Засадил здоровенный член между упругих булочек', 'http://img.mega-porno.me/video/42/2/41114/2.jpg', '', '18:01', 12544, 47, 'http://cdn1.vids69.com/video/42/2/41114/41114.mp4', '', '1, 3', 2),
+(22, 'Русская девушка после секса страстно отсосал', 'http://adultsite/uploads/post_images/pre3.jpg', '', '18:01', 12549, 50, 'http://cdn2.vids69.com/video/47/1/46077/46077.mp4', '', '1, 3', 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ CREATE TABLE `studios` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `videos` text NOT NULL,
-  `avatar` varchar(100) NOT NULL,
+  `avatar` varchar(200) NOT NULL,
   `idUsers` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -132,7 +133,8 @@ CREATE TABLE `studios` (
 --
 
 INSERT INTO `studios` (`id`, `name`, `videos`, `avatar`, `idUsers`) VALUES
-(1, 'Brazzers', '', '0', '1, 3, 2');
+(1, 'Brazzers', '', 'https://pbs.twimg.com/profile_images/626116924599074816/yM3f27Tx.jpg', '3, 2'),
+(2, 'Fake Taxi', '', 'https://res.cloudinary.com/teepublic/image/private/s--btcttRFm--/t_Preview/b_rgb:191919,c_limit,f_auto,h_313,q_90,w_313/v1483208845/production/designs/1010041_1', '1, ');
 
 -- --------------------------------------------------------
 
@@ -157,7 +159,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `email`, `status_user`, `avatar`, `likes_video`, `history`, `studios`) VALUES
-(1, 'shawn', 'Shawn1Shawn', 'markpetrov1991@gmail.com', 2, 'http://adultsite/uploads/avatars/1.jpg', '21, 12, 17, 20, 10, 18, ', '17, 14, 2, 5, 15, 18, 22, 19, 20, 21', '1, '),
+(1, 'shawn', 'Shawn1Shawn', 'markpetrov1991@gmail.com', 2, 'http://adultsite/uploads/avatars/1.jpg', '21, 12, 17, 20, 10, 18, ', '14, 2, 5, 15, 19, 18, 17, 20, 21, 22', '1, 2'),
 (2, 'predator', '123', '123@gmai.com', 2, '', '', '', ''),
 (3, 'bob', 'qwe', 'qwe@gmail.com', 1, '', '', '', ''),
 (4, 'bobo', 'qwerty', 'markshysholik@gmail.com', 1, '', '3, ', '', ''),
@@ -220,7 +222,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT для таблицы `studios`
 --
 ALTER TABLE `studios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
