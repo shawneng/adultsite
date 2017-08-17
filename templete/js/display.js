@@ -7,7 +7,7 @@ $(".button-collapses").sideNav();
 //$('.collapsible').collapsible();
 $( document ).ready(function() {
     $('.modal').modal();
-    $("#follow").click(
+    $("#f-btn").click(
         function(){
             $.ajax({ //отправляем ajax-запрос
                 type: "POST", //тип (POST, GET, PUT, etc)

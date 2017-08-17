@@ -1,7 +1,3 @@
-<?php
-$studios_array = explode(', ', $studios);
-$arraySearch = explode(" ", $info_array['title']);
-?>
 <div id="result"></div>
 <div class="full-story">
     <div class="c-video">
@@ -10,8 +6,8 @@ $arraySearch = explode(" ", $info_array['title']);
                 <div class="recom">Рекомендованные</div>
                 <?php
                 for ($i = $row_num; $i > $row_num - 18; $i--) {
-                    $info_array = $posts[$i];
-                    $search = $info_array['title'];
+                    $info_array_p = $posts[$i];
+                    $search = $info_array_p['title'];
                     $search = mb_strtolower($search);
                     $arrayNews = explode(" ", $search);
 
@@ -49,22 +45,25 @@ $arraySearch = explode(" ", $info_array['title']);
                 </div>
             </div>
             <div class="finfo radius z-depth-4">
+                <?php
+                if (!empty($info_array['studio'])) {
+                    $info_studio = $studios_array[$info_array['studio']];
+                    echo '
                 <div class="studio inline-block">
-                    <div class="img-studio"><img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A2PA1663PT14X35Y63D1010253415S84C12%3A19/views/1,width=300,height=300,appearanceId=2/brazzers-primary-logo-men-s-premium-t-shirt.jpg" alt="" class="circle"></div>
+                    <div class="img-studio"><img src="'.$info_studio['avatar'].'" alt="" class="circle"></div>
                 </div>
                 <div class="name-studio inline-block">
-                    <div class="name-s">Brazzers</div>
+                    <div class="name-s">'.$info_studio['name'].'</div>
                     <div class="date-o">Опубликовано: 14 июля 2017</div>
                 </div>
-                <div class="follow inline-block right">
-                    <?php
+                <div class="follow inline-block right">';
                     $idUsers_array = explode(', ', $info_studio['idUsers']);
-                    if (!in_array($id, $idUsers_array)){
+                    if (!in_array($id, $idUsers_array)) {
                         echo '<button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn pink" id="f-btn"><a class="inline-block following" id="follow">Подписаться</a><span id="c-follows" class="count-follow"> 1.1 МЛН</span></button>';
-                    }
-                    else {
+                    } else {
                         echo '<button class="z-depth-2 follow-btn inline-block waves-effect waves-light btn f-btn" id="f-btn"><a class="inline-block following f-color" id="follow">Подписка оформленна</a><span id="c-follows" class="count-follow f-color"> 1.1 МЛН</span></button>';
                     }
+                }
                     ?>
                 </div>
                 <div class="descr-video">

@@ -4,6 +4,8 @@ $id_video = $_GET['id'];
 $id_user = $info_user['id'];
 $info_array = $posts[$id_video];
 $history = $info_user['history'];
+$studios_array_f_u = explode(', ', $studios);
+$arraySearch = explode(" ", $info_array['title']);
 // Добавлення видео в історію
 $history_array = explode(', ', $info_user['history']);
 if (empty($history_array[0])) {

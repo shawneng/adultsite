@@ -1,7 +1,7 @@
 <?php
 if ($count_a != 0) {
     $count_a--;
-    for ($i = $count_a; $i > 0; $i--) {
+    for ($i = $count_a; $i >= 0; $i--) {
         $id_liked = $like_array[$i];
         $info_array = $posts[$id_liked];
         require "templete/short-story.php";

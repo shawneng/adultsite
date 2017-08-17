@@ -49,7 +49,7 @@
             echo '
                 <li>
                     <a class="waves-effect " href = "#!" >
-                        <img src = "https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A2PA1663PT14X35Y63D1010253415S84C12%3A19/views/1,width=300,height=300,appearanceId=2/brazzers-primary-logo-men-s-premium-t-shirt.jpg" alt = "" class="circle avatar" >
+                        <img src="'.$infoStudio['avatar'].'" alt = "" class="circle avatar" >
                         <span class="ver-center" > '.$infoStudio['name'].'</span >
                     </a >
                    </li>

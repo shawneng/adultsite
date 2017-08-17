@@ -60,7 +60,6 @@ for ($i = 1; $i <= $row_studio; $i++) {
 $info_studio = $studios_array[1];
 $studios_f_user = explode(", ", $info_user['studios']);
 $int_studios = count($studios_f_user);
-$int_studios--;
 
 // Вывод сообщения "Забыли пароль?"
 if ($_COOKIE['logining'] == 1) {
@@ -149,9 +148,6 @@ if(isset($_GET['liked'])) {
 //if(isset($_GET['page'])) {
 //    require_once "page.php";
 //}
-if(isset($_GET['search'])){
-    require_once "engine/search.php";
-}
 
 
 //Сортировки
