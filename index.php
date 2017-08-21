@@ -85,6 +85,7 @@ else {
     $max_count_posts = $row_num;
     $end_post = $row_num - $count_posts_wall;
 }
+
 function page($all_video, $count_posts_wall){
     if ($all_video > $count_posts_wall){
         $pages = $all_video / $count_posts_wall;
@@ -144,6 +145,9 @@ if(isset($_GET['categorie'])) {
 if(isset($_GET['liked'])) {
 
     require_once "engine/liked.php";
+}
+if(isset($_GET['search'])){
+    require_once "engine/search.php";
 }
 //if(isset($_GET['page'])) {
 //    require_once "page.php";

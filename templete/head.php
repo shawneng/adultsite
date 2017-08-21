@@ -22,20 +22,6 @@ $infoArray = mysqli_fetch_assoc($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><?php echo $infoArray['name_site']; ?></title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-        // language=JQuery-CSS
-        $('.test').click( function() {
-            document.write("1");
-            $.ajax({
-                type: "POST",
-                url: "index.php",
-                data: { name: "John", location: "Boston" }
-            }).done(function( msg ) {
-                alert( "Data Saved: " + msg );
-            });
-
-        });
-    </script>
 </head>
 <body>
 

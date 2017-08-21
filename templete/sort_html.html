@@ -3,10 +3,10 @@
 
     <div class="sort inline-block">
         <ul id="dropdown2" class="dropdown-content">
-            <li><a href="?sort=durAds">Long</a></li>
-            <li><a href="?sort=durDesc">Short</a></li>
+            <li><a href="#" class="long" id="long" >Long</a></li>
+            <li><a href="#" >Short</a></li>
         </ul>
-        <a class="btn dropdown-button" href="#!" data-activates="dropdown2">By duration<i class="material-icons right">arrow_drop_down</i></a>
+        <a class="btn dropdown-button" href="" data-activates="dropdown2">By duration<i class="material-icons right">arrow_drop_down</i></a>
 
     </div>
 
@@ -31,11 +31,15 @@
     </div>
 
     <div class="sort inline-block">
-        <form action="sorts.php">
+        <form>
             <p>
-                <input type="checkbox" class="filled-in" id="filled-in-box" />
-                <label for="filled-in-box">High-definition only</label>
+                <input type="checkbox" class="filled-in" id="filled-in-box"/>
+                <label for="filled-in-box"><a id="test">High-definition only</a></label>
             </p>
         </form>
     </div>
+</div>
+<div class="chip none">
+    HD only
+    <label for="filled-in-box"><i class="close material-icons" id="hd">close</i></label>
 </div>

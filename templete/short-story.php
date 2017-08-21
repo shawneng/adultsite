@@ -23,7 +23,7 @@
             echo '<a href="/engine/like.php?id=' . $info_array['id'] . '&iduser=' . $id . '&like=2"><i class="tiny material-icons">favorite_border</i></a>';
         }
     } elseif ($_COOKIE['logining'] !== 2) {
-        echo '<a href="/"><img src="../templete/images/un_like.png" alt="" class="infopngr"></a>';
+        echo '<a href="#modal2" class="modal-trigger modal-close modal-action" ><img src="../templete/images/un_like.png" alt="likes" class="infopngr"></a>';
     }
 
     echo '<div class="itext inline-block">' . $info_array['likes'] . '</div></div>

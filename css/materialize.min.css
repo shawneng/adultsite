@@ -4,6 +4,7 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 body {background-color: #292929;}
+.none{display: none!important;}
 .sinfo {padding-left: 5px;}
 .finfo {margin-top: 10px; background: #1a1a1a;  color: #fff; padding: 10px 10px 15px 10px;}
 .ver-center { position: relative; top: -5px;}
